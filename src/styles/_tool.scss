@@ -16,19 +16,19 @@
   @return math.div($px, $base) * 1em;
 }
 
-@function vh($px, $base: 1080px) {
+@function vh($px, $base: 768px) {
   @return math.div($px, $base) * 100vh;
 }
 
-@function dvh($px, $base: 1080px) {
+@function dvh($px, $base: 768px) {
   @return math.div($px, $base) * 100dvh;
 }
 
-@function svh($px, $base: 1080px) {
+@function svh($px, $base: 768px) {
   @return math.div($px, $base) * 100svh;
 }
 
-@function vw($px, $base: 1920px) {
+@function vw($px, $base: 1440px) {
   @return math.div($px, $base) * 100vw;
 }
 

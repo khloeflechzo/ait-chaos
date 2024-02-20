@@ -29,7 +29,7 @@ const config: Config = {
         xxl: '1920px',
       },
       fontFamily: {
-        matterSQ: ['var(--matter-sq)', 'sans-serif'],
+        goldman: ['var(--goldman)', 'sans-serif'],
       },
       backgroundImage: {
         dots: 'url(\'data:image/svg+xml,<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 0V4" stroke="white" stroke-opacity="0.1"/><path d="M0 2H4" stroke="white" stroke-opacity="0.1"/></svg>\')',

@@ -96,9 +96,10 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   background-color: var(--dark-grey, #090909);
+  font-family: var(--font-base);
 
   @include min-tablet {
-    font-size: vw(10px, 1440px);
+    font-size: vw(10px);
   }
 
   @include pcWide {
@@ -145,13 +146,9 @@ body {
 }
 
 .grid {
-  column-gap: rem(20px);
+  column-gap: rem(16px);
 
   @include min-tablet {
-    column-gap: rem(24px);
-  }
-
-  @include pcSmall {
     column-gap: rem(32px);
   }
 }
