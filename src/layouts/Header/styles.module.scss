@@ -1,0 +1,22 @@
+.header {
+  background: linear-gradient(180deg, var(--dark-grey) 0%, rgba(9, 9, 9, 0) 100%);
+  color: var(--white);
+  height: rem(80px);
+  width: 100%;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  overflow: hidden;
+
+  display: flex;
+  backdrop-filter: blur(#{rem(2.2px)});
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3.6rem;
+
+    align-items: center;
+  }
+}

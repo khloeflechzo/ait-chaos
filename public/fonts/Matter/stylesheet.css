@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Regular'), local('MatterSQ-Regular'),
+        url('MatterSQ-Regular.woff2') format('woff2'),
+        url('MatterSQ-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Heavy'), local('MatterSQ-Heavy'),
+        url('MatterSQ-Heavy.woff2') format('woff2'),
+        url('MatterSQ-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Medium'), local('MatterSQ-Medium'),
+        url('MatterSQ-Medium.woff2') format('woff2'),
+        url('MatterSQ-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Medium'), local('MatterSQ-Medium'),
+        url('MatterSQ-Medium.woff2') format('woff2'),
+        url('MatterSQ-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Regular'), local('MatterSQ-Regular'),
+        url('MatterSQ-Regular.woff2') format('woff2'),
+        url('MatterSQ-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter SQ';
+    src: local('Matter SQ Heavy'), local('MatterSQ-Heavy'),
+        url('MatterSQ-Heavy.woff2') format('woff2'),
+        url('MatterSQ-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

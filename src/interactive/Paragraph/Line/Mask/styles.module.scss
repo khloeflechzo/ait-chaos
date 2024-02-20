@@ -1,0 +1,15 @@
+.LineMask {
+  :global(.line) {
+    clip-path: inset(0);
+    p {
+      clip-path: inset(0);
+    }
+  }
+
+  :global(.word) {
+    will-change: transform;
+    backface-visibility: hidden;
+    inset: 0;
+    padding-bottom: 0.03em;
+  }
+}

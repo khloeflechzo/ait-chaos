@@ -1,0 +1,27 @@
+.button {
+  --bg-color: var(--neutral-dark);
+
+  min-width: rem(156px);
+  height: rem(48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  border-radius: 8px;
+
+  &__neutral {
+    --bg-color: var(--neutral-dark);
+  }
+  &__black {
+    --bg-color: var(--dark);
+    border: 1px solid var(--white, #fff);
+  }
+  &__purple {
+    --bg-color: var(--primaryPurple);
+  }
+}
+
+.label {
+  font-weight: 500;
+}

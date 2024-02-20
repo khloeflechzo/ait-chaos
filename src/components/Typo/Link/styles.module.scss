@@ -1,0 +1,35 @@
+.paragraph {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  font-family: var(--font-base);
+  letter-spacing: -0.32px;
+  transition: color 0.3s var(--easeInOutQuart);
+
+  &__silver {
+    color: var(--silver-gray);
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  &__white {
+    color: var(--white);
+  }
+
+  &__black {
+    color: var(--dark);
+  }
+
+  &__16 {
+    font-size: rem(16px);
+  }
+
+  &__12 {
+    font-size: rem(12px);
+    letter-spacing: normal;
+    line-height: 120%;
+    letter-spacing: initial;
+  }
+}

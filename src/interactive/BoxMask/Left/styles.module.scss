@@ -1,0 +1,14 @@
+.boxmask_wrapper {
+  &:not(.isComplete) {
+    overflow: hidden;
+
+    .boxmask__left {
+      overflow: hidden;
+    }
+  }
+}
+
+.boxmask__left {
+  position: relative;
+  display: block;
+}

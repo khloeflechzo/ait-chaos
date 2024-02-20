@@ -1,0 +1,33 @@
+.heading {
+  font-style: normal;
+  font-weight: 900;
+  line-height: 108%;
+  text-transform: uppercase;
+  font-family: var(--font-base);
+
+  &__white {
+    color: var(--white);
+  }
+
+  &__black {
+    color: var(--dark);
+  }
+
+  &__112 {
+    font-size: rem(112px);
+    line-height: 92%;
+    letter-spacing: rem(-2.24px);
+  }
+
+  &__100 {
+    font-size: rem(100px);
+    line-height: 92%;
+    letter-spacing: rem(-2px);
+  }
+
+  &__88 {
+    font-size: rem(88px);
+    line-height: 90%;
+    letter-spacing: initial;
+  }
+}

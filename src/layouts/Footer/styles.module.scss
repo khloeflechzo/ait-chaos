@@ -1,0 +1,30 @@
+.footer {
+  width: 100vw;
+  // margin-top: rem(96px);
+
+  &__form_blockInfo {
+    width: 100%;
+    margin: 0 auto rem(110px) !important;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(48px);
+    padding: 0 rem(170px) !important;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 0%;
+    }
+  }
+
+  &__copyright_socials {
+    width: 100%;
+    margin: 0 auto;
+    height: rem(97px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 rem(170px) !important;
+  }
+}

@@ -1,0 +1,21 @@
+.pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #090909;
+  z-index: 10;
+  color: white;
+  font-size: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &.isHide {
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -999;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,84 @@
+.paragraph {
+  --text-color: var(--white);
+
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  font-family: var(--font-base);
+  color: var(--text-color);
+
+  &__white {
+    --text-color: var(--white);
+  }
+
+  &__black {
+    --text-color: var(--dark);
+  }
+
+  &__silver {
+    --text-color: var(--silver-gray);
+  }
+
+  &__gray {
+    --text-color: var(--lightGray);
+  }
+
+  &__neutral_light {
+    --text-color: var(--Neutral-Light-00);
+  }
+
+  &__48 {
+    font-size: rem(48px);
+  }
+
+  &__24 {
+    font-size: rem(24px);
+
+    span {
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  &__21 {
+    font-size: rem(21px);
+
+    span {
+      font-weight: 400;
+      display: block;
+    }
+  }
+
+  &__20 {
+    font-size: rem(20px);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+
+    span {
+      line-height: 130%;
+      letter-spacing: initial;
+      display: block;
+      font-weight: inherit;
+    }
+  }
+
+  &__18 {
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.36px;
+
+    span {
+      line-height: 115%;
+      font-weight: inherit;
+    }
+  }
+
+  &__16 {
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: 125%;
+    letter-spacing: -0.32px;
+  }
+}
