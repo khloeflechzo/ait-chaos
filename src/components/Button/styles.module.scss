@@ -1,13 +1,21 @@
 .button {
   min-width: rem(120px);
   height: rem(40px);
-  background: var(--bg-color);
 
   &__black {
-    --bg-color: var(--black);
+    background: url('/icons/buttons/default.svg');
   }
   &__white {
-    --bg-color: var(--white);
+    background: url('/icons/buttons/white.svg');
+  }
+  &__green {
+    background: url('/icons/buttons/green.svg');
+  }
+  &__pink {
+    background: url('/icons/buttons/pink.svg');
+  }
+  &__blue {
+    background: url('/icons/buttons/blue.svg');
   }
 
   &_content {
@@ -19,18 +27,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    cursor: default;
-    pointer-events: none;
-  }
-
-  &_wrapper {
-    position: absolute;
     cursor: pointer;
-    pointer-events: auto;
-    inset: 0;
-    background: url('/images/button-wrapper.png');
-    width: 100%;
-    height: 100%;
   }
 }
 

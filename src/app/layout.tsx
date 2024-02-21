@@ -7,7 +7,6 @@ import React, { PropsWithChildren } from 'react';
 import { DebugGrid } from '@/components/DebugGrid';
 import { eightbits, goldman } from '@/constants/fonts';
 import Animate from '@/layouts/Animation';
-import { Footer } from '@/layouts/Footer';
 import { Header } from '@/layouts/Header';
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export default function RootLayout({ children }: PropsWithChildren): React.React
         <Animate>
           <Header />
           {children}
-          <Footer />
         </Animate>
         <DebugGrid />
       </body>

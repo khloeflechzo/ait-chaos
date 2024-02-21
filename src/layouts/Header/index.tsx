@@ -16,7 +16,7 @@ export const Header = (): ReactElement => {
           {headerButtonsData.map((btn) => (
             <Button
               key={btn.label}
-              text={btn.label}
+              label={btn.label}
               icon={btn.icon}
               bgColor={btn.bgColor}
               textColor={btn.textColor}
