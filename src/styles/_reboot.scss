@@ -139,10 +139,10 @@ body {
   line-height: 110%;
   font-weight: normal;
   font-size: rem(16px);
-  background-color: var(--dark, #080808);
+  background-color: var(--black, #000);
 
   transition: background-color 0.4s var(--easeInOutQuart);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .grid {

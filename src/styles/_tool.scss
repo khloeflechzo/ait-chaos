@@ -16,15 +16,15 @@
   @return math.div($px, $base) * 1em;
 }
 
-@function vh($px, $base: 768px) {
+@function vh($px, $base: 780px) {
   @return math.div($px, $base) * 100vh;
 }
 
-@function dvh($px, $base: 768px) {
+@function dvh($px, $base: 780px) {
   @return math.div($px, $base) * 100dvh;
 }
 
-@function svh($px, $base: 768px) {
+@function svh($px, $base: 780px) {
   @return math.div($px, $base) * 100svh;
 }
 
