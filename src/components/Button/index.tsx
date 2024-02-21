@@ -1,29 +1,35 @@
 import cn from 'classnames';
+import { isNil } from 'lodash';
 import React, { ReactElement } from 'react';
 
-import { TypoParagraph } from '../Typo';
+import { ButtonProps } from '@/types/common';
+
+import { TypoLabel } from '../Typo';
 import s from './styles.module.scss';
 
-interface IButtonProps {
+interface IButtonProps extends ButtonProps {
   onClick?: () => void;
-  bgColor?: 'purple' | 'neutral' | 'black';
   classess?: string;
-  text: string;
 }
 
 const Button = ({
-  bgColor = 'neutral',
+  bgColor = 'black',
+  textColor = 'white',
   onClick,
   classess = '',
-  text,
+  child,
+  label,
 }: IButtonProps): ReactElement => {
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
   return (
-    <button onClick={onClick} className={buttonClasses}>
-      <TypoParagraph color="white" size={16} className={s.label}>
-        {text}
-      </TypoParagraph>
-    </button>
+    <div onClick={onClick} className={buttonClasses}>
+      <button className={s.button_content}>
+        <TypoLabel color={textColor} size={12} className={s.label}>
+          {label}
+        </TypoLabel>
+        {!isNil(child) && child}
+      </button>
+    </div>
   );
 };
 

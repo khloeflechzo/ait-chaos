@@ -1,27 +1,36 @@
 .button {
-  --bg-color: var(--neutral-dark);
+  min-width: rem(120px);
+  height: rem(40px);
 
-  min-width: rem(156px);
-  height: rem(48px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  background: var(--bg-color);
-  border-radius: 8px;
-
-  &__neutral {
-    --bg-color: var(--neutral-dark);
-  }
   &__black {
-    --bg-color: var(--dark);
-    border: 1px solid var(--white, #fff);
+    background: url('/icons/buttons/default.svg');
   }
-  &__purple {
-    --bg-color: var(--primaryPurple);
+  &__white {
+    background: url('/icons/buttons/white.svg');
+  }
+  &__green {
+    background: url('/icons/buttons/green.svg');
+  }
+  &__pink {
+    background: url('/icons/buttons/pink.svg');
+  }
+  &__blue {
+    background: url('/icons/buttons/blue.svg');
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10px);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
   }
 }
 
 .label {
-  font-weight: 500;
+  text-transform: uppercase;
 }

@@ -1,13 +1,13 @@
 .label {
   --color-label: var(--white);
-  --fw-label: 500;
+  --fw-label: 400;
 
   font-family: var(--font-base);
-  font-style: normal;
-  line-height: 130%;
-
   font-weight: var(--fw-label);
   color: var(--color-label);
+  font-style: normal;
+
+  line-height: 133.333%;
 
   &__40 {
     font-size: rem(40px);
@@ -17,26 +17,10 @@
 
   &__32 {
     font-size: rem(32px);
-
-    span {
-      font-size: inherit;
-      line-height: 108%;
-      letter-spacing: -0.64px;
-      display: block;
-      font-weight: inherit;
-    }
   }
 
   &__28 {
     font-size: rem(28px);
-
-    span {
-      font-size: inherit;
-      line-height: 108%;
-      letter-spacing: -0.56px;
-      display: block;
-      font-weight: inherit;
-    }
   }
 
   &__16 {
@@ -49,12 +33,14 @@
 
   &__12 {
     font-size: rem(16px);
-    letter-spacing: -0.32px;
 
     @include pcSmall {
-      letter-spacing: -0.24px;
       font-size: rem(12px);
     }
+  }
+
+  &__8 {
+    font-size: rem(8px);
   }
 
   &__white {
@@ -62,15 +48,7 @@
   }
 
   &__black {
-    --color-label: var(--dark);
-  }
-
-  &__silver {
-    --color-label: var(--silver-gray);
-  }
-
-  &__purple {
-    --color-label: var(--primaryPurple);
+    --color-label: var(--black);
   }
 
   &__bold {

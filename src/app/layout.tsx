@@ -1,12 +1,12 @@
 import '../styles/app.scss';
 
+import classNames from 'classnames';
 import type { Metadata } from 'next';
 import React, { PropsWithChildren } from 'react';
 
 import { DebugGrid } from '@/components/DebugGrid';
-import { matterSQ } from '@/constants/fonts';
+import { eightbits, goldman } from '@/constants/fonts';
 import Animate from '@/layouts/Animation';
-import { Footer } from '@/layouts/Footer';
 import { Header } from '@/layouts/Header';
 
 export const metadata: Metadata = {
@@ -17,12 +17,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren): React.ReactElement {
   return (
-    <html lang="en" className={matterSQ.variable}>
+    <html lang="en" className={classNames(goldman.variable, eightbits.variable)}>
       <body>
         <Animate>
           <Header />
           {children}
-          <Footer />
         </Animate>
         <DebugGrid />
       </body>
