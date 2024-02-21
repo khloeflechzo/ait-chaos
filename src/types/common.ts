@@ -17,7 +17,7 @@ export interface IconProps {
 
 export interface ButtonProps {
   label: string;
-  icon?: ReactNode | ReactElement;
+  child?: ReactNode | ReactElement;
   bgColor?: 'black' | 'white' | 'green' | 'pink' | 'blue';
   textColor?: 'black' | 'white';
 }

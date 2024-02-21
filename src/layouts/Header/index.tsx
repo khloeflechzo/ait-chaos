@@ -17,7 +17,7 @@ export const Header = (): ReactElement => {
             <Button
               key={btn.label}
               label={btn.label}
-              icon={btn.icon}
+              child={btn.child}
               bgColor={btn.bgColor}
               textColor={btn.textColor}
             />

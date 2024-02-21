@@ -17,7 +17,7 @@ const Button = ({
   textColor = 'white',
   onClick,
   classess = '',
-  icon,
+  child,
   label,
 }: IButtonProps): ReactElement => {
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
@@ -27,7 +27,7 @@ const Button = ({
         <TypoLabel color={textColor} size={12} className={s.label}>
           {label}
         </TypoLabel>
-        {!isNil(icon) && icon}
+        {!isNil(child) && child}
       </button>
     </div>
   );

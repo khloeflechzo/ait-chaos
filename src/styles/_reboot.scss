@@ -102,7 +102,7 @@ html {
     font-size: vw(10px);
   }
 
-  @include pcWide {
+  @include pcMid {
     font-size: 10px;
   }
 }

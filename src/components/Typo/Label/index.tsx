@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 interface TypoLabelProps extends PropsWithChildren {
   color?: 'white' | 'black';
-  size?: 40 | 32 | 28 | 16 | 14 | 12;
+  size?: 40 | 32 | 28 | 16 | 14 | 12 | 8;
   weight?: 'bold' | 'medium' | 'normal';
   tag?: 'h4' | 'h5' | 'h6' | 'p' | 'span';
   className?: string;
