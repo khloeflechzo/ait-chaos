@@ -23,3 +23,9 @@ export const threeButtonsData: ButtonProps[] = [
     child: null,
   },
 ];
+
+export const TextBlockValue = [
+  'Experience the unique fusion of NFTs and DeFi with CHAOS, crafted on the ERC404 protocol by PANDORA.',
+  'Unveil the intrigue of CHAOS boxes—where the rarity determines the amount of Stablecoin you earn.',
+  'Begin your journey by effortlessly transferring $CHAOS tokens until you acquire your desired NFTs. Start exploring the world of CHAOS now!',
+];

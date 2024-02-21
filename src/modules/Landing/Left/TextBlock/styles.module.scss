@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  height: rem(402px);
+  background: url('/images/text-bg-wrapper.png');
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 rem(16px);
+
+  p {
+    text-align: center;
+    font-size: rem(16px);
+    font-family: var(--font-goldman);
+    font-weight: 400;
+
+    background-clip: text;
+    background: var(--light-green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+      display: block;
+      margin-bottom: rem(16px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
