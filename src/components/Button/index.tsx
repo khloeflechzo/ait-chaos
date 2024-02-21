@@ -1,28 +1,43 @@
 import cn from 'classnames';
-import React, { ReactElement } from 'react';
+import { isNil } from 'lodash';
+import Image from 'next/image';
+import React, { ReactElement, ReactNode } from 'react';
 
-import { TypoParagraph } from '../Typo';
+import { TypoLabel } from '../Typo';
 import s from './styles.module.scss';
 
 interface IButtonProps {
   onClick?: () => void;
-  bgColor?: 'purple' | 'neutral' | 'black';
+  bgColor?: 'white' | 'black';
+  textColor?: 'white' | 'black';
   classess?: string;
   text: string;
+  icon?: ReactElement | ReactNode;
 }
 
 const Button = ({
-  bgColor = 'neutral',
+  bgColor = 'black',
+  textColor = 'white',
   onClick,
   classess = '',
   text,
+  icon,
 }: IButtonProps): ReactElement => {
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
   return (
     <button onClick={onClick} className={buttonClasses}>
-      <TypoParagraph color="white" size={16} className={s.label}>
-        {text}
-      </TypoParagraph>
+      <div className={s.button_content}>
+        <TypoLabel color={textColor} size={12} className={s.label}>
+          {text}
+        </TypoLabel>
+        {!isNil(icon) && icon}
+        <Image
+          src="/images/button-wrapper.png"
+          fill
+          alt="button-wrapper"
+          className={s.button_wrapper}
+        />
+      </div>
     </button>
   );
 };

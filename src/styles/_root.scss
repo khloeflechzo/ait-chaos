@@ -18,7 +18,8 @@
   --easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
   --easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1);
 
-  --font-base: var(--goldman, 'Goldman');
+  --font-base: var(--eight-bits, '8BIT WONDER');
+  --font-goldman: var(--goldman, 'Goldman');
 
   --button-gap: #{rem(12px)};
 

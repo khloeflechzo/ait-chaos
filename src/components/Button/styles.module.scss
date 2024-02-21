@@ -1,27 +1,39 @@
 .button {
-  --bg-color: var(--neutral-dark);
-
-  min-width: rem(156px);
-  height: rem(48px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  min-width: rem(120px);
+  height: rem(40px);
   background: var(--bg-color);
-  border-radius: 8px;
 
-  &__neutral {
-    --bg-color: var(--neutral-dark);
-  }
   &__black {
-    --bg-color: var(--dark);
-    border: 1px solid var(--white, #fff);
+    --bg-color: var(--black);
   }
-  &__purple {
-    --bg-color: var(--primaryPurple);
+  &__white {
+    --bg-color: var(--white);
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10px);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &_wrapper {
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    inset: 0;
+    background: url('/images/button-wrapper.png');
+    width: 100%;
+    height: 100%;
   }
 }
 
 .label {
-  font-weight: 500;
+  text-transform: uppercase;
 }

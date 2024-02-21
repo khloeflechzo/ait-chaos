@@ -15,3 +15,14 @@ export const goldman = localFont({
   ],
   variable: '--goldman',
 });
+
+export const eightbits = localFont({
+  src: [
+    {
+      path: '../../public/fonts/8bit/8BITWONDERNominal.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--eight-bits',
+});
