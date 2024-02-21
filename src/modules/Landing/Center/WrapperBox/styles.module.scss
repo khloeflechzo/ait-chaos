@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .image {
+    object-fit: contain;
+    top: rem(-15px) !important;
+    z-index: 2;
+  }
+
+  .elipse {
+    position: absolute;
+    bottom: rem(60px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: rem(544px);
+    background: var(--elipse-bg);
+    filter: blur(#{rem(80px)});
+    width: rem(544px);
+    height: rem(544px);
+    flex-shrink: 0;
+    z-index: 1;
+  }
+}
