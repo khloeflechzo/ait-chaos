@@ -99,6 +99,10 @@ html {
   font-family: var(--font-base);
 
   @include min-tablet {
+    font-size: vw(10px, 768px);
+  }
+
+  @include pcSmall {
     font-size: vw(10px);
   }
 
