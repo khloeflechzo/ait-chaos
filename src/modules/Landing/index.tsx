@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Fade from '@/interactive/Fade';
+
 import Bottom from './Bottom';
 import Center from './Center';
 import LeftSide from './Left';
@@ -10,9 +12,13 @@ const LandingPage = (): React.ReactElement => {
   return (
     <div className={`container ${s.main_wrapper}`}>
       <div className={s.content}>
-        <LeftSide />
+        <Fade direction="left">
+          <LeftSide />
+        </Fade>
         <Center />
-        <Right />
+        <Fade direction="right">
+          <Right />
+        </Fade>
       </div>
       <Bottom />
     </div>

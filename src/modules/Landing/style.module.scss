@@ -4,6 +4,8 @@
 
   @include min-tablet {
     height: 100dvh;
+    min-height: inherit;
+    overflow: hidden;
   }
 
   padding-top: rem(96px); /* header height + padding-top */
@@ -30,7 +32,6 @@
     }
 
     @include pcSmall {
-      height: 100%;
       align-items: center;
       justify-content: center;
       flex-direction: row;

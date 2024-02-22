@@ -8,7 +8,7 @@
     gap: rem(24px);
   }
 
-  & > div {
+  & > div > div {
     height: rem(48px);
 
     @include min-tablet {

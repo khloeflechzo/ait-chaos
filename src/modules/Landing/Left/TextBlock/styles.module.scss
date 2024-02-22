@@ -8,8 +8,12 @@
   padding: 0 rem(16px);
   position: relative;
 
-  height: rem(330px);
-  padding: rem(16px) rem(16px) 0;
+  height: rem(342px);
+
+  @include min-tablet {
+    height: rem(330px);
+    padding: rem(16px) rem(16px) 0;
+  }
 
   @include pcSmall {
     height: rem(402px);
