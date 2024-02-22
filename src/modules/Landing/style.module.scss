@@ -1,6 +1,14 @@
 .main_wrapper {
-  height: 100dvh;
   width: 100%;
+
+  overflow: scroll;
+
+  @include min-tablet {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  padding-top: rem(96px); // header height + padding-top
 
   @include min-tablet {
     padding-top: rem(116px); // header height + padding-top
@@ -12,7 +20,7 @@
 
   .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include onlyMobile {
       padding-left: rem(16px);

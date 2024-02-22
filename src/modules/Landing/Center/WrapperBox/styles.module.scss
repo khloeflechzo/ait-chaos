@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  height: rem(341px);
 
   @include min-tablet {
     height: rem(489px);
@@ -44,6 +45,9 @@
     z-index: 3;
     bottom: 0;
     margin: auto 0;
+
+    width: rem(28px);
+    height: rem(141px);
 
     @include min-tablet {
       width: rem(47px);

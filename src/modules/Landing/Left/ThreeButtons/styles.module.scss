@@ -2,16 +2,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  @include min-tablet {
-    gap: rem(12px);
-  }
+  gap: rem(12px);
 
   @include pcSmall {
     gap: rem(24px);
   }
 
   & > div {
+    height: rem(48px);
+
     @include min-tablet {
       height: rem(40px);
     }

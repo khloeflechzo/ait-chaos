@@ -4,6 +4,9 @@
   margin: auto;
   z-index: 5;
 
+  width: rem(178px);
+  height: rem(222px);
+
   @include min-tablet {
     width: rem(230px);
     height: rem(286px);
