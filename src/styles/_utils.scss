@@ -1,4 +1,6 @@
 .container {
+  max-width: 100vw !important;
+
   @include min-tablet {
     width: 100% !important;
     padding-left: rem(40px);
