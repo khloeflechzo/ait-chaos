@@ -1,0 +1,18 @@
+.rare {
+  width: 100%;
+  height: rem(350px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_label {
+    color: var(--black);
+    text-align: center;
+    -webkit-text-stroke-width: rem(6px);
+    -webkit-text-stroke-color: var(--label-color);
+    font-size: rem(48px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
