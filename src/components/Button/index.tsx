@@ -24,7 +24,7 @@ const Button = ({
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
   return (
     <div onClick={onClick} className={buttonClasses}>
-      <ImagePreload src={`/icons/buttons/${bgColor}.svg`} alt="text-block-wrapper" priority fill />
+      <ImagePreload src={`/icons/buttons/${bgColor}.png`} alt="text-block-wrapper" priority fill />
       <button className={s.button_content}>
         <TypoLabel color={textColor} size={12} className={s.label}>
           {label}
