@@ -1,0 +1,11 @@
+.wrapper {
+  flex-direction: column;
+  gap: rem(24px);
+  width: rem(316px);
+
+  display: none;
+
+  @include pcSmall {
+    display: flex;
+  }
+}

@@ -29,3 +29,19 @@ export const TextBlockValue = [
   'Unveil the intrigue of CHAOS boxes—where the rarity determines the amount of Stablecoin you earn.',
   'Begin your journey by effortlessly transferring $CHAOS tokens until you acquire your desired NFTs. Start exploring the world of CHAOS now!',
 ];
+
+export enum CTADirectionType {
+  UP = 'up',
+  DOWN = 'down',
+}
+
+export const ctaValue = [
+  {
+    label: 'BUY CHAOS ON UNISWAP',
+    direction: CTADirectionType.DOWN,
+  },
+  {
+    label: 'Buy NFTs #CHAOSBOX on Opensea or Blur',
+    direction: CTADirectionType.UP,
+  },
+];

@@ -1,21 +1,24 @@
 .button {
   min-width: rem(120px);
   height: rem(40px);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   &__black {
-    background: url('/icons/buttons/default.svg') no-repeat;
+    background-image: url('/icons/buttons/default.svg');
   }
   &__white {
-    background: url('/icons/buttons/white.svg') no-repeat;
+    background-image: url('/icons/buttons/white.svg');
   }
   &__green {
-    background: url('/icons/buttons/green.svg') no-repeat;
+    background-image: url('/icons/buttons/green.svg');
   }
   &__pink {
-    background: url('/icons/buttons/pink.svg') no-repeat;
+    background-image: url('/icons/buttons/pink.svg');
   }
   &__blue {
-    background: url('/icons/buttons/blue.svg') no-repeat;
+    background-image: url('/icons/buttons/blue.svg');
   }
 
   &_content {

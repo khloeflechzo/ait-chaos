@@ -1,17 +1,23 @@
 .wrapper {
   width: 100%;
-  height: rem(402px);
-  background: url('/images/text-bg-wrapper.png') no-repeat;
   overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 rem(16px);
+  position: relative;
+
+  height: rem(330px);
+  padding: rem(16px) rem(16px) 0;
+
+  @include pcSmall {
+    height: rem(402px);
+    padding: 0 rem(16px);
+  }
 
   p {
     text-align: center;
-    font-size: rem(16px);
     font-family: var(--font-goldman);
     font-weight: 400;
 
@@ -19,10 +25,24 @@
     background: var(--light-green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    @include min-tablet {
+      font-size: rem(14px);
+    }
+
+    @include pcSmall {
+      font-size: rem(16px);
+    }
 
     span {
       display: block;
-      margin-bottom: rem(16px);
+      margin-bottom: rem(8px);
+
+      @include pcSmall {
+        margin-bottom: rem(16px);
+      }
 
       &:last-child {
         margin-bottom: 0;

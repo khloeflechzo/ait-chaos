@@ -1,5 +1,12 @@
 .wrapper {
   flex: 1;
-  margin-left: rem(118px);
-  margin-right: rem(46px);
+
+  @include min-tablet {
+    margin-right: rem(24px);
+  }
+
+  @include pcSmall {
+    margin-left: rem(118px);
+    margin-right: rem(46px);
+  }
 }

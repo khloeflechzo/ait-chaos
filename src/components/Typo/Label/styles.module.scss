@@ -32,11 +32,7 @@
   }
 
   &__12 {
-    font-size: rem(16px);
-
-    @include pcSmall {
-      font-size: rem(12px);
-    }
+    font-size: rem(12px);
   }
 
   &__8 {
