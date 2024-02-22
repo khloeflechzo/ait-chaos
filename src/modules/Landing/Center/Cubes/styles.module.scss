@@ -1,0 +1,12 @@
+.cubes {
+  position: absolute;
+  width: rem(331px);
+  height: rem(413px);
+  inset: 0;
+  margin: auto;
+  z-index: 5;
+
+  &_image {
+    object-fit: contain;
+  }
+}
