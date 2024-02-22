@@ -1,6 +1,6 @@
 .button {
   min-width: rem(120px);
-  height: rem(40px);
+  height: rem(42px);
   position: relative;
 
   img {
@@ -10,8 +10,8 @@
   &_content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: rem(10px);
+    justify-content: space-between;
+    padding: 0 rem(25px);
     width: 100%;
     height: 100%;
     overflow: hidden;

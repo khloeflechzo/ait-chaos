@@ -8,14 +8,10 @@
     gap: rem(24px);
   }
 
-  & > div > div {
-    height: rem(48px);
+  & > div {
+    height: rem(60px);
 
     @include min-tablet {
-      height: rem(40px);
-    }
-
-    @include pcSmall {
       height: rem(54px);
     }
 

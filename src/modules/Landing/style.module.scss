@@ -1,20 +1,16 @@
 .main_wrapper {
   width: 100%;
   min-height: 110dvh;
-
-  @include min-tablet {
-    height: 100dvh;
-    min-height: inherit;
-    overflow: hidden;
-  }
-
   padding-top: rem(96px); /* header height + padding-top */
 
   @include min-tablet {
+    min-height: initial;
+    overflow: hidden;
     padding-top: rem(116px); /* header height + padding-top */
   }
 
   @include pcSmall {
+    height: 100dvh;
     padding-top: rem(96px); /* header height + padding-top */
   }
 
