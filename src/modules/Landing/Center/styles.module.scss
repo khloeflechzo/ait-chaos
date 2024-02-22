@@ -5,8 +5,7 @@
   }
 
   @include pcSmall {
-    margin-left: rem(118px);
-    margin-right: rem(46px);
+    margin: 0;
   }
 
   & > div {

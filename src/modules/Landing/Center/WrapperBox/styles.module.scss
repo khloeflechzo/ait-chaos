@@ -3,11 +3,13 @@
   height: rem(341px);
 
   @include min-tablet {
-    height: rem(489px);
+    height: rem(530px);
   }
 
   @include pcSmall {
     height: rem(634px);
+    width: rem(636px);
+    margin: 0 auto;
   }
 
   position: relative;
