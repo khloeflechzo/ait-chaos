@@ -3,19 +3,19 @@
   height: rem(40px);
 
   &__black {
-    background: url('/icons/buttons/default.svg');
+    background: url('/icons/buttons/default.svg') no-repeat;
   }
   &__white {
-    background: url('/icons/buttons/white.svg');
+    background: url('/icons/buttons/white.svg') no-repeat;
   }
   &__green {
-    background: url('/icons/buttons/green.svg');
+    background: url('/icons/buttons/green.svg') no-repeat;
   }
   &__pink {
-    background: url('/icons/buttons/pink.svg');
+    background: url('/icons/buttons/pink.svg') no-repeat;
   }
   &__blue {
-    background: url('/icons/buttons/blue.svg');
+    background: url('/icons/buttons/blue.svg') no-repeat;
   }
 
   &_content {
