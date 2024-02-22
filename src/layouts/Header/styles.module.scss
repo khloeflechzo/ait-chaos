@@ -2,7 +2,11 @@
   background: linear-gradient(180deg, var(--dark-grey) 0%, rgba(9, 9, 9, 0) 100%);
   color: var(--white);
   width: 100%;
-  height: rem(76px);
+  height: auto;
+
+  @include min-tablet {
+    height: rem(76px);
+  }
 
   position: fixed;
   top: 0;
@@ -15,8 +19,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: rem(8px);
-    padding-bottom: rem(8px);
+    padding: rem(16px);
+
+    @include min-tablet {
+      padding-top: rem(8px);
+      padding-bottom: rem(8px);
+    }
 
     .buttons {
       display: flex;
@@ -24,11 +32,36 @@
       align-items: center;
       gap: rem(8px);
 
-      div {
-        &:last-child {
-          width: rem(172px);
+      &_link {
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+
+        div {
+          &:nth-child(1),
+          &:nth-child(2) {
+            @include onlyMobile {
+              display: none;
+            }
+          }
+
+          &:last-child {
+            width: rem(172px);
+          }
         }
       }
     }
+  }
+}
+
+.hamburger {
+  width: rem(32px);
+  height: rem(32px);
+  position: relative;
+
+  display: block;
+
+  @include min-tablet {
+    display: none;
   }
 }
