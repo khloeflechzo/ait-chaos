@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { ReactElement } from 'react';
 
+import ImagePreload from '@/components/ImagePreload';
 import { TypoLabel } from '@/components/Typo';
 import { CTADirectionType, ctaValue } from '@/constants/datas/contents';
 
@@ -14,6 +15,7 @@ const BoxContent = ({
   direction: CTADirectionType;
 }): ReactElement => (
   <div className={classNames(s.block, s[`block__${direction}`])}>
+    <ImagePreload src="/images/overlay.png" alt="text-block-wrapper" priority fill />
     <TypoLabel size={12} color="white" className="!leading-5 !uppercase">
       {text}
     </TypoLabel>
