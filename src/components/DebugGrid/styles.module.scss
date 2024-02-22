@@ -16,13 +16,18 @@
 }
 
 .grid_wrapper {
-  --gap: #{rem(20px)};
+  --gap: #{rem(16px)};
 
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--gap);
 
-  @media (min-width: 1200px) {
+  @include min-tablet {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    --gap: #{rem(24px)};
+  }
+
+  @include pcSmall {
     --gap: #{rem(36px)};
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }

@@ -1,12 +1,22 @@
 .cubes {
   position: absolute;
-  width: rem(331px);
-  height: rem(413px);
   inset: 0;
   margin: auto;
   z-index: 5;
 
+  @include min-tablet {
+    width: rem(230px);
+    height: rem(286px);
+  }
+
+  @include pcSmall {
+    width: rem(331px);
+    height: rem(413px);
+  }
+
   &_image {
     object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 }

@@ -1,11 +1,17 @@
 .wrapper {
   width: 100%;
-  height: rem(634px);
+
+  @include min-tablet {
+    height: rem(489px);
+  }
+
+  @include pcSmall {
+    height: rem(634px);
+  }
 
   position: relative;
 
   .image {
-    object-fit: contain;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -24,6 +30,12 @@
     height: rem(544px);
     flex-shrink: 0;
     z-index: 1;
+
+    display: none;
+
+    @include pcSmall {
+      display: block;
+    }
   }
 
   .btn {
@@ -32,8 +44,16 @@
     z-index: 3;
     bottom: 0;
     margin: auto 0;
-    width: rem(68px);
-    height: rem(272px);
+
+    @include min-tablet {
+      width: rem(47px);
+      height: rem(188px);
+    }
+
+    @include pcSmall {
+      width: rem(68px);
+      height: rem(272px);
+    }
 
     &_prev {
       left: rem(-4px);
