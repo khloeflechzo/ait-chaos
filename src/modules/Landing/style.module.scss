@@ -1,18 +1,28 @@
 .main_wrapper {
-  display: flex;
   height: 100dvh;
-
-  flex-direction: column;
+  width: 100%;
 
   @include min-tablet {
     padding-top: rem(116px); // header height + padding-top
-    flex-direction: row-reverse;
   }
 
   @include pcSmall {
     padding-top: rem(96px); // header height + padding-top
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    @include min-tablet {
+      flex-direction: row-reverse;
+    }
+
+    @include pcSmall {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
   }
 }

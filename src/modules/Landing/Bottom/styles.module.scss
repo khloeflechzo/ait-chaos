@@ -1,0 +1,15 @@
+.bottom {
+  display: none;
+  width: 100%;
+  gap: rem(24px);
+  height: rem(52px);
+  margin-top: rem(40px);
+
+  @include min-tablet {
+    display: flex;
+  }
+
+  @include pcSmall {
+    display: none;
+  }
+}

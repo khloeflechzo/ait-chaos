@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
-import Address from './Address';
+import Address from '@/components/Address';
+
 import CTA from './CTA';
 import RareLabel from './RareLabel';
 import s from './styles.module.scss';
