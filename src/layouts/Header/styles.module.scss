@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   z-index: 50;
-  overflow: hidden;
+  // overflow: hidden;
 
   display: flex;
 
@@ -64,4 +64,8 @@
   @include min-tablet {
     display: none;
   }
+}
+
+.open {
+  display: none !important;
 }

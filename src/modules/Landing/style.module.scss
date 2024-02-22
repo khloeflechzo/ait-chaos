@@ -1,18 +1,24 @@
 .main_wrapper {
-  height: 100dvh;
   width: 100%;
+  min-height: 110dvh;
 
   @include min-tablet {
-    padding-top: rem(116px); // header height + padding-top
+    height: 100dvh;
+  }
+
+  padding-top: rem(96px); /* header height + padding-top */
+
+  @include min-tablet {
+    padding-top: rem(116px); /* header height + padding-top */
   }
 
   @include pcSmall {
-    padding-top: rem(96px); // header height + padding-top
+    padding-top: rem(96px); /* header height + padding-top */
   }
 
   .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include onlyMobile {
       padding-left: rem(16px);
