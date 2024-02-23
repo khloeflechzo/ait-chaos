@@ -30,7 +30,9 @@ export const Header = (): ReactElement => {
   return (
     <header className={s.header}>
       <div className={classNames('container', s.header__container)}>
-        <ImagePreload alt="logo" src="/icons/logo.svg" width={60} height={60} />
+        <div className={s.header_logo}>
+          <ImagePreload alt="logo" src="/icons/logo.svg" fill />
+        </div>
         <div className={s.buttons}>
           <div className={classNames(s.buttons_link, open ? s.open : '')}>
             {headerButtonsData.map((btn, idx) => (

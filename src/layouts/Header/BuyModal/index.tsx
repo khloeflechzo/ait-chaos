@@ -1,6 +1,6 @@
 import React, { Dispatch, ReactElement, SetStateAction } from 'react';
 
-import CTA from '@/modules/Landing/Right/CTA';
+import CTA from '@/components/CTA';
 
 import s from './style.module.scss';
 const BuyModal = ({

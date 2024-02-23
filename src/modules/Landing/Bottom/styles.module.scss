@@ -18,9 +18,18 @@
       width: auto;
       flex: 1;
     }
-
     &:last-child {
       width: rem(244px);
+    }
+  }
+}
+.bottom_wrapper {
+  & > :last-child {
+    flex-direction: row;
+    margin-top: rem(40px);
+    display: none;
+    @include pcSmall {
+      display: none;
     }
   }
 }

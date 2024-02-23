@@ -3,9 +3,25 @@
   color: var(--white);
   width: 100%;
   height: auto;
-
+  &_logo {
+    position: relative;
+    width: rem(40px);
+    height: rem(40px);
+    @include min-tablet {
+      width: rem(60px);
+      height: rem(60px);
+    }
+    @include pcSmall {
+      width: rem(120px);
+      height: rem(121px);
+    }
+  }
   @include min-tablet {
     height: rem(76px);
+  }
+
+  @include pcSmall {
+    height: auto;
   }
 
   position: fixed;
