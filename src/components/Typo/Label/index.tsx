@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 interface TypoLabelProps extends PropsWithChildren {
   color?: 'white' | 'black' | 'green';
-  size?: 40 | 32 | 28 | 16 | 14 | 12 | 8;
+  size?: 40 | 32 | 28 | 20 | 16 | 14 | 12 | 8;
   weight?: 'bold' | 'medium' | 'normal';
   tag?: 'h4' | 'h5' | 'h6' | 'p' | 'span';
   className?: string;
@@ -14,7 +14,7 @@ interface TypoLabelProps extends PropsWithChildren {
 const TypoLabel = forwardRef<HTMLHeadingElement, TypoLabelProps>((props: TypoLabelProps, ref) => {
   const {
     color = 'white',
-    size = 12,
+    size = 14,
     weight = 'normal',
     tag: Tag = 'span',
     className,

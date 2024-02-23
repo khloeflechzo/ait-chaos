@@ -16,7 +16,7 @@ const BoxContent = ({
 }): ReactElement => (
   <div className={classNames(s.block, s[`block__${direction}`])}>
     <ImagePreload src="/images/overlay.png" alt="text-block-wrapper" priority fill />
-    <TypoLabel size={12} color="white" className="!leading-5 !uppercase">
+    <TypoLabel size={20} color="white" className="!uppercase !leading-normal">
       {text}
     </TypoLabel>
   </div>

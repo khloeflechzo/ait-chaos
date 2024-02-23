@@ -26,7 +26,7 @@ const Button = ({
     <div onClick={onClick} className={buttonClasses}>
       <ImagePreload src={`/icons/buttons/${bgColor}.png`} alt="text-block-wrapper" priority fill />
       <button className={s.button_content}>
-        <TypoLabel color={textColor} size={12} className={s.label}>
+        <TypoLabel color={textColor} className={s.label}>
           {label}
         </TypoLabel>
         {!isNil(child) && child}

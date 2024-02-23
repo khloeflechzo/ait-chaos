@@ -40,10 +40,7 @@ export default function ThreeButtons(): ReactElement {
       ...item,
       child: (
         <TypoLabel tag="p" size={16} color="black">
-          {percentages[item.label as ButtonType]}
-          <TypoLabel size={8} color="black">
-            %
-          </TypoLabel>
+          {percentages[item.label as ButtonType]}%
         </TypoLabel>
       ),
     }));

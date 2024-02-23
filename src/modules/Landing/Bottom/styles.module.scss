@@ -12,4 +12,15 @@
   @include pcSmall {
     display: none;
   }
+
+  & > div {
+    &:first-child {
+      width: auto;
+      flex: 1;
+    }
+
+    &:last-child {
+      width: rem(244px);
+    }
+  }
 }
