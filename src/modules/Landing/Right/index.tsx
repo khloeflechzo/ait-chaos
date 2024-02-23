@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import Address from '@/components/Address';
+import Soicals from '@/components/Socials';
 
 import CTA from './CTA';
 import RareLabel from './RareLabel';
@@ -12,6 +13,7 @@ const Right = (): ReactElement => {
       <Address />
       <RareLabel />
       <CTA />
+      <Soicals />
     </div>
   );
 };

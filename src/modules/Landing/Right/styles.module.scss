@@ -8,4 +8,14 @@
   @include pcSmall {
     display: flex;
   }
+
+  & > div:last-child {
+    height: rem(51px);
+    width: 100%;
+    display: none;
+
+    @include pcSmall {
+      display: block;
+    }
+  }
 }

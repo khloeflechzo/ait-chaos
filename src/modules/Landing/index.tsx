@@ -20,7 +20,9 @@ const LandingPage = (): React.ReactElement => {
           <Right />
         </Fade>
       </div>
-      <Bottom />
+      <Fade direction="bottom">
+        <Bottom />
+      </Fade>
     </div>
   );
 };
