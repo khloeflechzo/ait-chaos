@@ -26,3 +26,14 @@ export const eightbits = localFont({
   ],
   variable: '--eight-bits',
 });
+
+export const upHeavel = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Upheavel/UpheavalTT-BRK-.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--upheavel',
+});
