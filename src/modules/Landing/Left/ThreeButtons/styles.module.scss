@@ -1,18 +1,19 @@
 .wrapper {
   width: 100%;
   display: flex;
-  flex-direction: column;
   gap: rem(12px);
 
-  @include pcSmall {
-    gap: rem(24px);
+  @include min-tablet {
+    flex-direction: column;
   }
-
   & > div {
-    height: rem(60px);
-
+    height: rem(40px);
+    width: calc(100% / 3);
     @include min-tablet {
-      height: rem(54px);
+      width: 100%;
+    }
+    @include pcSmall {
+      height: rem(48px);
     }
 
     button {

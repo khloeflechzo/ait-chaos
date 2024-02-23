@@ -12,7 +12,7 @@ const WrapperBox = ({ children }: PropsWithChildren): ReactElement => {
   return (
     <div className={s.wrapper}>
       <ImagePlaceHolder src="/images/nft-box.png" fill alt="ntf-box" className={s.image} />
-      <div className={s.elipse}></div>
+      {/* <div className={s.elipse}></div> */}
       <button className={classNames(s.btn, s.btn_prev)}>
         <Image alt="prev-btn" src="/images/prev-btn.png" fill />
       </button>

@@ -3,6 +3,7 @@
 import React, { ReactElement } from 'react';
 
 import Address from '@/components/Address';
+import RareLabel from '@/components/RareLabel';
 import useWindowResize from '@/hooks/useWindowResize';
 
 import Cubes from './Cubes';
@@ -16,6 +17,7 @@ const Center = (): ReactElement => {
     <div className={s.wrapper}>
       <WrapperBox>
         <Cubes />
+        <RareLabel className={s.rarelabel} />
       </WrapperBox>
       {isMobile && <Address />}
     </div>
