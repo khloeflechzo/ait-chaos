@@ -18,17 +18,33 @@ export const Header = (): ReactElement => {
   const [openBuy, setOpenBuy] = useState(false);
   const { isDesktop } = useWindowResize();
 
-  const handleButtonChaos = (): void => {
+  const handleButtonChaos = async (): Promise<void> => {
     if (!isDesktop) {
       setOpenBuy(true);
       return;
     } else {
-      window.location.reload();
+      location.reload();
+      // try {
+      //   if ((window as any).ethereum) {
+      //         const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
+      //         const currentAccount = accounts[0];
+      //         console.log(currentAccount);
+      //         // Now you can use `currentAccount` in your contract interactions
+      //         await getBalanceOfUser("0x63092eE66F5d8d14754265aDB370D024ebFa2BcF");
+      //     } else {
+      //         console.error('MetaMask extension not detected');
+      //     }
+      // } catch (error) {
+      //     console.error('Error getting account or balance:', error);
+      // }
     }
   };
 
   return (
     <header className={s.header}>
+      <div className={s.header__line}>
+        <Image src={'/icons/header-line.png'} fill alt="header-line" />
+      </div>
       <div className={classNames('container', s.header__container)}>
         <div className={s.header_logo}>
           <ImagePreload alt="logo" src="/icons/logo.svg" fill />
