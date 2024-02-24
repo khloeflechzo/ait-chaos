@@ -19,7 +19,7 @@
       flex: 1;
     }
     &:last-child {
-      width: rem(244px);
+      width: rem(255px);
     }
   }
 }
@@ -28,6 +28,9 @@
     flex-direction: row;
     margin-top: rem(40px);
     display: none;
+    @include min-tablet {
+      display: flex;
+    }
     @include pcSmall {
       display: none;
     }
