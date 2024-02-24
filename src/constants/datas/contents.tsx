@@ -1,3 +1,4 @@
+import { TypoLabel } from '@/components/Typo';
 import { ButtonProps } from '@/types/common';
 
 export enum ButtonType {
@@ -5,6 +6,27 @@ export enum ButtonType {
   sell = 'sell',
   transfer = 'transfer',
 }
+
+export const twoButtonsData: ButtonProps[] = [
+  {
+    label: ButtonType.buy,
+    bgColor: 'silver',
+    child: (
+      <TypoLabel tag="p" size={16} color="black">
+        NFTS
+      </TypoLabel>
+    ),
+  },
+  {
+    label: ButtonType.buy,
+    bgColor: 'green',
+    child: (
+      <TypoLabel tag="p" size={16} color="black">
+        $CHAOS
+      </TypoLabel>
+    ),
+  },
+];
 
 export const threeButtonsData: ButtonProps[] = [
   {
