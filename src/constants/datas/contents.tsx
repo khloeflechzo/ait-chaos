@@ -1,6 +1,34 @@
 import { TypoLabel } from '@/components/Typo';
 import { ButtonProps } from '@/types/common';
 
+export const carouselData: ButtonProps[] = [
+  {
+    label: 'Build On #Pandora',
+    bgColor: 'green',
+    child: null,
+  },
+  {
+    label: 'NFTs + Defi',
+    bgColor: 'pink',
+    child: null,
+  },
+  {
+    label: 'Build On #Pandora',
+    bgColor: 'blue',
+    child: null,
+  },
+  {
+    label: 'NFTs + Defi',
+    bgColor: 'pink',
+    child: null,
+  },
+  {
+    label: 'Build On #Pandora',
+    bgColor: 'green',
+    child: null,
+  },
+];
+
 export enum ButtonType {
   buy = 'buy',
   sell = 'sell',

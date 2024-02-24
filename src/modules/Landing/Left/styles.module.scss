@@ -5,7 +5,10 @@
 
   width: 100%;
 
+  margin-top: rem(20px);
+
   @include min-tablet {
     width: rem(316px);
+    margin-top: 0;
   }
 }
