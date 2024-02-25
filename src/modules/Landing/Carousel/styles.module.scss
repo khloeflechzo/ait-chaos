@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100vw;
+  margin-left: rem(-40px);
+
+  height: rem(40px);
+
+  display: flex;
+
+  gap: rem(20px);
+
+  @include min-tablet {
+    gap: rem(28px);
+    margin-bottom: rem(32px);
+  }
+
+  @include pcSmall {
+    gap: rem(40px);
+  }
+}
+
+.item {
+  height: rem(40px);
+  width: max-content;
+  min-width: rem(200px);
+  background-color: transparent;
+  display: flex;
+  gap: rem(40px);
+  justify-content: start;
+  align-content: center;
+
+  &__image {
+    --icon-size: #{rem(24px)};
+
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    @include min-tablet {
+      --icon-size: #{rem(28px)};
+    }
+
+    @include pcSmall {
+      --icon-size: #{rem(40px)};
+    }
+
+    position: relative;
+
+    img {
+      position: absolute;
+      object-fit: fill;
+    }
+  }
+
+  span:last-child {
+    margin-top: rem(2px);
+  }
+}
