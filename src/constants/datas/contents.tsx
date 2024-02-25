@@ -38,7 +38,7 @@ export enum ButtonType {
 export const twoButtonsData: ButtonProps[] = [
   {
     label: ButtonType.buy,
-    bgColor: 'silver',
+    bgColor: 'yellow',
     child: (
       <TypoLabel tag="p" size={16} color="black">
         NFTS

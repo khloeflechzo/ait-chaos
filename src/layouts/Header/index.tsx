@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ReactElement, useState } from 'react';
 
 import Button from '@/components/Button';
+import Carousel from '@/components/Carousel';
 import ImagePreload from '@/components/ImagePreload';
 import { headerButtonsData } from '@/constants/datas/header';
 import useWindowResize from '@/hooks/useWindowResize';
@@ -75,6 +76,7 @@ export const Header = (): ReactElement => {
           </button>
         </div>
       </div>
+      <Carousel />
       {open && <HeroMobile />}
       {openBuy && <BuyModal setOpenBuy={setOpenBuy} />}
     </header>

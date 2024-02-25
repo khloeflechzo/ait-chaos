@@ -1,16 +1,17 @@
 .wrapper {
   width: 100vw;
-  margin-left: rem(-40px);
-
-  height: rem(40px);
-
   display: flex;
-
   gap: rem(20px);
+  margin: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  position: absolute;
+  top: calc(100% + #{rem(15px)});
 
   @include min-tablet {
+    padding: rem(32px) 0;
     gap: rem(28px);
-    margin-bottom: rem(32px);
   }
 
   @include pcSmall {
@@ -19,14 +20,24 @@
 }
 
 .item {
-  height: rem(40px);
   width: max-content;
-  min-width: rem(200px);
   background-color: transparent;
   display: flex;
-  gap: rem(40px);
   justify-content: start;
   align-content: center;
+
+  min-width: rem(100px);
+  gap: rem(20px);
+
+  @include min-tablet {
+    height: rem(40px);
+    gap: rem(28px);
+  }
+
+  @include pcSmall {
+    min-width: rem(200px);
+    gap: rem(40px);
+  }
 
   &__image {
     --icon-size: #{rem(24px)};

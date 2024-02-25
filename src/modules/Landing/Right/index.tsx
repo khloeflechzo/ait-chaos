@@ -1,17 +1,15 @@
 import React, { ReactElement } from 'react';
 
-import Address from '@/components/Address';
+import BuyAndAddress from '@/components/BuyAndAddress';
 import Soicals from '@/components/Socials';
 
 import CTA from '../../../components/CTA';
-import RareLabel from '../../../components/RareLabel';
 import s from './styles.module.scss';
 
 const Right = (): ReactElement => {
   return (
     <div className={s.wrapper}>
-      <Address />
-      <RareLabel />
+      <BuyAndAddress />
       <CTA />
       <Soicals />
     </div>
