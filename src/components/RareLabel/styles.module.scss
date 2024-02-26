@@ -8,19 +8,73 @@
   &_label {
     color: var(--black);
     text-align: center;
-    -webkit-text-stroke-width: rem(1px);
-    -webkit-text-stroke-color: var(--label-color);
-    font-size: rem(36px);
+    font-size: rem(28px);
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    letter-spacing: rem(5px);
+
     @include min-tablet {
       font-size: rem(48px);
-      -webkit-text-stroke-width: rem(3px);
     }
     @include pcSmall {
       font-size: rem(56px);
-      -webkit-text-stroke-width: rem(4px);
+    }
+
+    &__common {
+      text-shadow:
+        5px 0 var(--label-common),
+        -5px 0 var(--label-common),
+        0 5px var(--label-common),
+        0 -5px var(--label-common),
+        5px 5px var(--label-common),
+        -5px -5px var(--label-common),
+        5px -5px var(--label-common),
+        -5px 5px var(--label-common);
+    }
+    &__rare {
+      text-shadow:
+        5px 0 var(--label-rare),
+        -5px 0 var(--label-rare),
+        0 5px var(--label-rare),
+        0 -5px var(--label-rare),
+        5px 5px var(--label-rare),
+        -5px -5px var(--label-rare),
+        5px -5px var(--label-rare),
+        -5px 5px var(--label-rare);
+    }
+    &__epic {
+      text-shadow:
+        5px 0 var(--label-epic),
+        -5px 0 var(--label-epic),
+        0 5px var(--label-epic),
+        0 -5px var(--label-epic),
+        5px 5px var(--label-epic),
+        -5px -5px var(--label-epic),
+        5px -5px var(--label-epic),
+        -5px 5px var(--label-epic);
+    }
+    &__legendary {
+      text-shadow:
+        5px 0 var(--label-legendary),
+        -5px 0 var(--label-legendary),
+        0 5px var(--label-legendary),
+        0 -5px var(--label-legendary),
+        5px 5px var(--label-legendary),
+        -5px -5px var(--label-legendary),
+        5px -5px var(--label-legendary),
+        -5px 5px var(--label-legendary);
+    }
+    &__chaos {
+      text-shadow:
+        5px 0 var(--label-chaos),
+        -5px 0 var(--label-chaos),
+        0 5px var(--label-chaos),
+        0 -5px var(--label-chaos),
+        5px 5px var(--label-chaos),
+        -5px -5px var(--label-chaos),
+        5px -5px var(--label-chaos),
+        -5px 5px var(--label-chaos);
     }
   }
 }
