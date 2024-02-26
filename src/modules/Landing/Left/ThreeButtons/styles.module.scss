@@ -1,14 +1,20 @@
 .wrapper {
   width: 100%;
   display: flex;
-  gap: rem(12px);
+  gap: rem(6px);
 
   @include min-tablet {
+    gap: rem(12px);
     flex-direction: column;
   }
   & > div {
     height: rem(40px);
     width: calc(100% / 3);
+
+    @include onlyMobile {
+      min-width: initial;
+    }
+
     @include min-tablet {
       width: 100%;
     }
@@ -18,9 +24,16 @@
 
     button {
       height: 100%;
-      padding: 0 rem(25px);
       gap: 0;
-      justify-content: space-between;
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+
+      @include min-tablet {
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 rem(25px);
+      }
     }
   }
 }
