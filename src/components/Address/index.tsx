@@ -8,7 +8,7 @@ import s from './styles.module.scss';
 const Address = ({ className }: { className?: string }): ReactElement => {
   return (
     <div className={cn(s.address, className)}>
-      <ImagePreload src="/icons/buttons/big.png" alt="text-block-wrapper" priority fill />
+      <ImagePreload src="/icons/buttons/gray.png" alt="text-block-wrapper" priority fill />
       <button className={s.address_btn}>
         <div className={s.address_btn__content}>
           <p>CA $CHAOS: 0x...73js</p>

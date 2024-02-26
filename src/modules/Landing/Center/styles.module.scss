@@ -19,11 +19,9 @@
     bottom: rem(10px);
     z-index: 5;
     height: auto;
-    @include pcSmall {
-      display: none;
-    }
+
     @include min-tablet {
-      bottom: rem(27px);
+      bottom: rem(20px);
     }
   }
 }

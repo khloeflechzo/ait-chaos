@@ -20,7 +20,11 @@
   }
 
   &__28 {
-    font-size: rem(28px);
+    font-size: rem(20px);
+
+    @include pcSmall {
+      font-size: rem(28px);
+    }
   }
 
   &__24 {
