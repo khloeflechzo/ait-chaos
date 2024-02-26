@@ -5,6 +5,19 @@
   align-items: center;
   justify-content: center;
 
+  --out-sd: #{rem(3px)};
+  --in-sd: #{rem(-3px)};
+
+  @include min-tablet {
+    --out-sd: #{rem(4px)};
+    --in-sd: #{rem(-4px)};
+  }
+
+  @include pcSmall {
+    --out-sd: #{rem(5px)};
+    --in-sd: #{rem(-5px)};
+  }
+
   &_label {
     color: var(--black);
     text-align: center;
@@ -23,58 +36,58 @@
 
     &__common {
       text-shadow:
-        5px 0 var(--label-common),
-        -5px 0 var(--label-common),
-        0 5px var(--label-common),
-        0 -5px var(--label-common),
-        5px 5px var(--label-common),
-        -5px -5px var(--label-common),
-        5px -5px var(--label-common),
-        -5px 5px var(--label-common);
+        var(--in-sd) 0 var(--label-common),
+        var(--out-sd) 0 var(--label-common),
+        0 var(--in-sd) var(--label-common),
+        0 var(--out-sd) var(--label-common),
+        var(--in-sd) var(--in-sd) var(--label-common),
+        var(--out-sd) var(--out-sd) var(--label-common),
+        var(--in-sd) var(--out-sd) var(--label-common),
+        var(--out-sd) var(--in-sd) var(--label-common);
     }
     &__rare {
       text-shadow:
-        5px 0 var(--label-rare),
-        -5px 0 var(--label-rare),
-        0 5px var(--label-rare),
-        0 -5px var(--label-rare),
-        5px 5px var(--label-rare),
-        -5px -5px var(--label-rare),
-        5px -5px var(--label-rare),
-        -5px 5px var(--label-rare);
+        var(--out-sd) 0 var(--label-rare),
+        var(--in-sd) 0 var(--label-rare),
+        0 var(--out-sd) var(--label-rare),
+        0 var(--in-sd) var(--label-rare),
+        var(--out-sd) var(--out-sd) var(--label-rare),
+        var(--in-sd) var(--in-sd) var(--label-rare),
+        var(--out-sd) var(--in-sd) var(--label-rare),
+        var(--in-sd) var(--out-sd) var(--label-rare);
     }
     &__epic {
       text-shadow:
-        5px 0 var(--label-epic),
-        -5px 0 var(--label-epic),
-        0 5px var(--label-epic),
-        0 -5px var(--label-epic),
-        5px 5px var(--label-epic),
-        -5px -5px var(--label-epic),
-        5px -5px var(--label-epic),
-        -5px 5px var(--label-epic);
+        var(--out-sd) 0 var(--label-epic),
+        var(--in-sd) 0 var(--label-epic),
+        0 var(--out-sd) var(--label-epic),
+        0 var(--in-sd) var(--label-epic),
+        var(--out-sd) var(--out-sd) var(--label-epic),
+        var(--in-sd) var(--in-sd) var(--label-epic),
+        var(--out-sd) var(--in-sd) var(--label-epic),
+        var(--in-sd) var(--out-sd) var(--label-epic);
     }
     &__legendary {
       text-shadow:
-        5px 0 var(--label-legendary),
-        -5px 0 var(--label-legendary),
-        0 5px var(--label-legendary),
-        0 -5px var(--label-legendary),
-        5px 5px var(--label-legendary),
-        -5px -5px var(--label-legendary),
-        5px -5px var(--label-legendary),
-        -5px 5px var(--label-legendary);
+        var(--out-sd) 0 var(--label-legendary),
+        var(--in-sd) 0 var(--label-legendary),
+        0 var(--out-sd) var(--label-legendary),
+        0 var(--in-sd) var(--label-legendary),
+        var(--out-sd) var(--out-sd) var(--label-legendary),
+        var(--in-sd) var(--in-sd) var(--label-legendary),
+        var(--out-sd) var(--in-sd) var(--label-legendary),
+        var(--in-sd) var(--out-sd) var(--label-legendary);
     }
     &__chaos {
       text-shadow:
-        5px 0 var(--label-chaos),
-        -5px 0 var(--label-chaos),
-        0 5px var(--label-chaos),
-        0 -5px var(--label-chaos),
-        5px 5px var(--label-chaos),
-        -5px -5px var(--label-chaos),
-        5px -5px var(--label-chaos),
-        -5px 5px var(--label-chaos);
+        var(--out-sd) 0 var(--label-chaos),
+        var(--in-sd) 0 var(--label-chaos),
+        0 var(--out-sd) var(--label-chaos),
+        0 var(--in-sd) var(--label-chaos),
+        var(--out-sd) var(--out-sd) var(--label-chaos),
+        var(--in-sd) var(--in-sd) var(--label-chaos),
+        var(--out-sd) var(--in-sd) var(--label-chaos),
+        var(--in-sd) var(--out-sd) var(--label-chaos);
     }
   }
 }
