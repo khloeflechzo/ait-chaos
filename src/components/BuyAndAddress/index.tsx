@@ -9,7 +9,13 @@ import s from './styles.module.scss';
 const BuyAndAddress = ({ adddressClass = '' }: { adddressClass?: string }): ReactElement => {
   return (
     <div className={s.wrapper_white}>
-      <ImagePreload src="/icons/buttons/white.svg" alt="text-block-wrapper" priority fill />
+      <ImagePreload
+        quality={100}
+        src="/icons/buttons/buy-address.png"
+        alt="text-block-wrapper"
+        priority
+        fill
+      />
       <TwoBuyButtons />
       <Address className={adddressClass} />
     </div>

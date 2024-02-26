@@ -1,10 +1,12 @@
 import React, { ReactElement } from 'react';
 
+import BuildOn from '@/components/BuildOn';
 import BuyAndAddress from '@/components/BuyAndAddress';
+import MTE from '@/components/MTE';
+import ThreeButtons from '@/components/ThreeButtons';
 
 import s from './styles.module.scss';
 import TextBlock from './TextBlock';
-import ThreeButtons from './ThreeButtons';
 
 export default function LeftSide(): ReactElement {
   return (
@@ -12,6 +14,10 @@ export default function LeftSide(): ReactElement {
       <BuyAndAddress adddressClass={s.wrapper__address} />
       <ThreeButtons />
       <TextBlock />
+      <div className={s.wrapper_mteb}>
+        <MTE />
+        <BuildOn />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React, { ReactElement } from 'react';
 
+import BuildOn from '@/components/BuildOn';
 import BuyAndAddress from '@/components/BuyAndAddress';
+import MTE from '@/components/MTE';
 import Soicals from '@/components/Socials';
 
 import CTA from '../../../components/CTA';
@@ -12,6 +14,10 @@ const Right = (): ReactElement => {
       <BuyAndAddress />
       <CTA />
       <Soicals />
+      <div className={s.wrapper_mteb}>
+        <MTE />
+        <BuildOn />
+      </div>
     </div>
   );
 };

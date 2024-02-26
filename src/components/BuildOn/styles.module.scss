@@ -1,0 +1,20 @@
+.build_on {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  p {
+    font-weight: 400;
+    line-height: 100%;
+    -webkit-text-fill-color: var(--black);
+    -webkit-text-stroke-width: rem(2.497px);
+    color: var(--white);
+    text-align: center;
+    font-size: rem(54px);
+
+    @include pcSmall {
+      font-size: rem(62.497px);
+    }
+  }
+}

@@ -2,11 +2,12 @@
   display: none;
   width: 100%;
   gap: rem(24px);
-  height: rem(52px);
   margin-top: rem(40px);
 
   @include min-tablet {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   @include pcSmall {
@@ -19,7 +20,41 @@
       flex: 1;
     }
     &:last-child {
-      width: rem(316px);
+      flex-basis: 50%;
+    }
+  }
+
+  &__addrees {
+    p {
+      font-size: rem(18px) !important;
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+    width: 100%;
+
+    & > div {
+      width: 100%;
+
+      &:first-child {
+        display: flex;
+        width: 100%;
+
+        & > div {
+          width: 30%;
+
+          button {
+            flex-direction: column;
+          }
+        }
+      }
+
+      &:last-child {
+        height: rem(52px);
+      }
     }
   }
 }

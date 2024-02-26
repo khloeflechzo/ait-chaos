@@ -1,7 +1,7 @@
 .main_wrapper {
   width: 100%;
   min-height: 100dvh;
-  padding-top: rem(120px); /* header height + padding-top */
+  padding-top: rem(130px); /* header height + padding-top */
   padding-bottom: rem(80px); /* header height + padding-top */
   overflow: hidden;
 
@@ -21,7 +21,6 @@
     @include min-tablet {
       margin-top: rem(72px);
       flex-direction: row-reverse;
-      height: rem(550px);
     }
 
     @include pcSmall {
