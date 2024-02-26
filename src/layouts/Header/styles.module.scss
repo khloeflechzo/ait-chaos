@@ -3,6 +3,17 @@
   color: var(--white);
   width: 100%;
   height: auto;
+  position: relative;
+
+  &__line {
+    width: 100%;
+    position: absolute;
+    height: rem(15px);
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
   &_logo {
     position: relative;
     width: rem(40px);

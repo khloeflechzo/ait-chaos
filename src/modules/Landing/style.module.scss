@@ -2,17 +2,15 @@
   width: 100%;
   min-height: 100dvh;
   padding-top: rem(96px); /* header height + padding-top */
-  padding-bottom: rem(50px); /* header height + padding-top */
+  padding-bottom: rem(80px); /* header height + padding-top */
   overflow: hidden;
 
   @include min-tablet {
     padding-top: rem(116px); /* header height + padding-top */
-    padding-bottom: rem(50px); /* header height + padding-top */
   }
 
   @include pcSmall {
     padding-top: rem(173px); /* header height + padding-top */
-    padding-bottom: rem(50px); /* header height + padding-top */
   }
 
   .content {
@@ -26,12 +24,14 @@
 
     @include min-tablet {
       flex-direction: row-reverse;
+      height: rem(488px);
     }
 
     @include pcSmall {
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       flex-direction: row;
+      height: auto;
     }
   }
 }

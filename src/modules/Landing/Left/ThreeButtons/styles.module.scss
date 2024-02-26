@@ -10,6 +10,7 @@
   & > div {
     height: rem(40px);
     width: calc(100% / 3);
+    cursor: default;
 
     @include onlyMobile {
       min-width: initial;
@@ -28,6 +29,7 @@
       padding: 0;
       flex-direction: column;
       justify-content: center;
+      cursor: default;
 
       @include min-tablet {
         justify-content: space-between;

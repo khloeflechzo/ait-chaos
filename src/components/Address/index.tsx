@@ -1,12 +1,13 @@
+import cn from 'classnames';
 import Image from 'next/image';
 import React, { ReactElement } from 'react';
 
 import ImagePreload from '../ImagePreload';
 import s from './styles.module.scss';
 
-const Address = (): ReactElement => {
+const Address = ({ className }: { className?: string }): ReactElement => {
   return (
-    <div className={s.address}>
+    <div className={cn(s.address, className)}>
       <ImagePreload src="/icons/buttons/big.png" alt="text-block-wrapper" priority fill />
       <button className={s.address_btn}>
         <div className={s.address_btn__content}>
