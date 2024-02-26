@@ -1,12 +1,22 @@
 .wrapper {
   position: relative;
+
   @include min-tablet {
     flex: 1;
     margin-right: rem(24px);
+    margin-top: 0;
   }
 
   @include pcSmall {
     margin: 0;
+  }
+
+  & > div:first-child {
+    margin-bottom: rem(24px);
+
+    @include min-tablet {
+      display: none;
+    }
   }
 
   // & > div {
