@@ -29,6 +29,8 @@
         letter-spacing: rem(1px);
         font-family: var(--font-base);
         color: var(--black);
+        white-space: nowrap;
+
         @include min-tablet {
           font-size: rem(24px);
         }

@@ -5,16 +5,26 @@
   z-index: 5;
 
   width: rem(178px);
-  height: rem(222px);
+  // height: rem(222px);
+  top: rem(-30px);
+
+  height: 100%;
 
   @include min-tablet {
+    top: 0;
     width: rem(230px);
-    height: rem(286px);
+    // height: rem(286px);
   }
 
   @include pcSmall {
     width: rem(331px);
-    height: rem(413px);
+    // height: rem(413px);
+  }
+
+  div,
+  li {
+    width: 100%;
+    height: 100%;
   }
 
   &_image {

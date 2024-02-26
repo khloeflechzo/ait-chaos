@@ -1,6 +1,22 @@
 import { TypoLabel } from '@/components/Typo';
 import { ButtonProps } from '@/types/common';
 
+export enum CubeEnumTypes {
+  Common = 'common',
+  Rare = 'rare',
+  Epic = 'epic',
+  Legendary = 'legendary',
+  Chaos = 'chaos',
+}
+
+export const cubesDatas = [
+  { type: CubeEnumTypes.Common },
+  { type: CubeEnumTypes.Rare },
+  { type: CubeEnumTypes.Epic },
+  { type: CubeEnumTypes.Legendary },
+  { type: CubeEnumTypes.Chaos },
+];
+
 export const carouselData: ButtonProps[] = [
   {
     label: 'Build On #Pandora',
