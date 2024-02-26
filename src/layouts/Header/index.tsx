@@ -44,7 +44,13 @@ export const Header = (): ReactElement => {
   return (
     <header className={s.header}>
       <div className={s.header__line}>
-        <Image src={'/icons/header-line.png'} fill alt="header-line" />
+        <div className={s.header__lines}>
+          <Image src={'/icons/line/header-line-left.svg'} fill alt="header-line-left" />
+        </div>
+        <div className={s.header__line__center}></div>
+        <div className={s.header__lines}>
+          <Image src={'/icons/line/header-line-right.svg'} fill alt="header-line-right" />
+        </div>
       </div>
       <div className={classNames('container', s.header__container)}>
         <div className={s.header_logo}>

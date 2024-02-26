@@ -18,11 +18,12 @@
     &__content {
       display: flex;
       gap: rem(12px);
-
+      justify-content: center;
+      align-items: center;
       p {
-        margin-top: rem(2.8px);
-        -webkit-text-stroke-width: rem(1px);
-        -webkit-text-stroke-color: var(--white);
+        // margin-top: rem(2.8px);
+        // -webkit-text-stroke-width: rem(1px);
+        // -webkit-text-stroke-color: var(--white);
         font-size: rem(20px);
         font-weight: 400;
         letter-spacing: rem(1px);
