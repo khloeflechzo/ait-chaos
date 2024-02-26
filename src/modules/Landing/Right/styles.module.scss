@@ -1,15 +1,16 @@
 .wrapper {
   flex-direction: column;
   gap: rem(24px);
-  width: rem(316px);
+  width: rem(255px);
 
   display: none;
 
   @include pcSmall {
+    width: rem(342px);
     display: flex;
   }
 
-  & > div:last-child {
+  & > div:nth-child(3) {
     height: rem(51px);
     width: 100%;
     display: none;
@@ -17,5 +18,12 @@
     @include pcSmall {
       display: block;
     }
+  }
+
+  &_mteb {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12px);
+    width: 100%;
   }
 }

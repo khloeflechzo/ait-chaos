@@ -1,16 +1,12 @@
 .main_wrapper {
   width: 100%;
   min-height: 100dvh;
-  padding-top: rem(96px); /* header height + padding-top */
+  padding-top: rem(130px); /* header height + padding-top */
   padding-bottom: rem(80px); /* header height + padding-top */
   overflow: hidden;
 
-  @include min-tablet {
-    padding-top: rem(116px); /* header height + padding-top */
-  }
-
   @include pcSmall {
-    padding-top: rem(173px); /* header height + padding-top */
+    padding-top: rem(200px); /* header height + padding-top */
   }
 
   .content {
@@ -23,8 +19,8 @@
     }
 
     @include min-tablet {
+      margin-top: rem(72px);
       flex-direction: row-reverse;
-      height: rem(488px);
     }
 
     @include pcSmall {

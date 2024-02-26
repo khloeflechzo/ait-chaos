@@ -8,14 +8,29 @@
   margin-top: rem(20px);
 
   @include min-tablet {
-    width: rem(316px);
+    width: rem(255px);
     margin-top: 0;
   }
 
-  &__address {
-    display: block;
+  & > div:first-child {
+    display: flex;
 
     @include min-tablet {
+      display: none !important;
+    }
+  }
+
+  &_mteb {
+    display: none;
+
+    @include min-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: rem(12px);
+      width: 100%;
+    }
+
+    @include pcSmall {
       display: none;
     }
   }
