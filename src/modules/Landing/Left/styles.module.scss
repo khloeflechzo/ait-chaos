@@ -12,14 +12,6 @@
     margin-top: 0;
   }
 
-  & > div:first-child {
-    display: flex;
-
-    @include min-tablet {
-      display: none !important;
-    }
-  }
-
   &_mteb {
     display: none;
 
