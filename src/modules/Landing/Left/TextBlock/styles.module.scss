@@ -16,8 +16,8 @@
   }
 
   @include pcSmall {
-    height: rem(402px);
-    padding: 0 rem(16px);
+    height: rem(380px);
+    padding: rem(16px) rem(16px) 0;
   }
 
   p {
@@ -26,7 +26,7 @@
     font-weight: 400;
 
     background-clip: text;
-    background: var(--light-green);
+    background: var(--label-common);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -43,10 +43,6 @@
     span {
       display: block;
       margin-bottom: rem(8px);
-
-      @include pcSmall {
-        margin-bottom: rem(16px);
-      }
 
       &:last-child {
         margin-bottom: 0;

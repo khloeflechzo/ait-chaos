@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+  overflow: hidden;
 
   @include min-tablet {
     flex: 1;
