@@ -7,7 +7,7 @@ import s from './styles.module.scss';
 const icons = [
   {
     icon: '/icons/socials/x.svg',
-    href: '#',
+    href: 'https://twitter.com/Chaos_ERC404',
   },
   {
     icon: '/icons/socials/discord.svg',
