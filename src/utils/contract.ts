@@ -1,51 +1,3 @@
-// import { ethers } from 'ethers';
-
-// import { abi, contractAddress, ifura } from '@/constants/contracts';
-
-// const provider = new ethers.JsonRpcProvider(ifura);
-// export const contract = new ethers.Contract(contractAddress, abi, provider);
-
-// async function getBalanceOfUser(address: string | number): Promise<void> {
-//   try {
-//     const tx = await contract.balanceOf(address);
-//     console.log('Balance of user ' + address + ' is ' + tx);
-//   } catch (error) {
-//     console.error('Error staking NFT:', error);
-//   }
-// }
-
-// async function stakeNFT(tokenId: string | number): Promise<void> {
-//   try {
-//     const tx = await contract.stake([tokenId]);
-//     await tx.wait();
-//     console.log('Staked NFT successfully');
-//   } catch (error) {
-//     console.error('Error staking NFT:', error);
-//   }
-// }
-
-// async function unstakeNFT(tokenId: string | number): Promise<void> {
-//   try {
-//     const tx = await contract.unstake([tokenId]);
-//     await tx.wait();
-//     console.log('Unstaked NFT successfully');
-//   } catch (error) {
-//     console.error('Error unstaking NFT:', error);
-//   }
-// }
-
-// async function claimReward(): Promise<void> {
-//   try {
-//     const tx = await contract.claimReward();
-//     await tx.wait();
-//     console.log('Reward claimed successfully');
-//   } catch (error) {
-//     console.error('Error claiming reward:', error);
-//   }
-// }
-
-// export { claimReward, getBalanceOfUser, stakeNFT, unstakeNFT };
-
 import Web3 from 'web3';
 
 import { abi, ankr, contractAddress } from '@/constants/contracts';
@@ -60,6 +12,26 @@ export async function getBalanceOfUser(address: string): Promise<void> {
     console.log('Balance of user ' + address + ' is ' + balance);
   } catch (error) {
     console.error('Error getting balance of user:', error);
+  }
+}
+
+export async function getOwnedNFT(address: string, index: number): Promise<void> {
+  try {
+    const tokenId = await contract.methods.ownedNFT(address, index).call();
+    console.log(
+      'Token ID of NFT at index ' + index + ' owned by address ' + address + ' is ' + tokenId
+    );
+  } catch (error) {
+    console.error('Error getting owned NFT:', error);
+  }
+}
+
+export async function getReward(address: string): Promise<void> {
+  try {
+    const reward = await contract.methods.getReward(address).call();
+    console.log('Reward of address ' + address + ' is ' + reward);
+  } catch (error) {
+    console.error('Error getting reward:', error);
   }
 }
 
@@ -90,14 +62,5 @@ export async function claimReward(): Promise<void> {
     console.log('Reward claimed successfully:', receipt.transactionHash);
   } catch (error) {
     console.error('Error claiming reward:', error);
-  }
-}
-
-export async function getOwnedNFT(user: string, index: number): Promise<void> {
-  try {
-    const tokenId = await contract.methods.ownedNFT(user, index).call();
-    console.log('Token ID of NFT at index ' + index + ' owned by user ' + user + ' is ' + tokenId);
-  } catch (error) {
-    console.error('Error getting owned NFT:', error);
   }
 }

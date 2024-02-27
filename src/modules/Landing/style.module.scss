@@ -1,12 +1,11 @@
 .main_wrapper {
   width: 100%;
-  min-height: 100dvh;
   padding-top: rem(130px); /* header height + padding-top */
-  padding-bottom: rem(80px); /* header height + padding-top */
-  overflow: hidden;
+  padding-bottom: rem(80px);
+  overflow-x: hidden;
 
   @include pcSmall {
-    padding-top: rem(200px); /* header height + padding-top */
+    padding-top: rem(113px); /* header height + padding-top */
   }
 
   .content {

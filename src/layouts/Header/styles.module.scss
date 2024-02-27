@@ -49,8 +49,8 @@
       height: rem(60px);
     }
     @include pcSmall {
-      width: rem(96px);
-      height: rem(96px);
+      width: rem(65px);
+      height: rem(65px);
     }
   }
   @include min-tablet {
@@ -100,6 +100,14 @@
 
           &:last-child {
             width: rem(172px);
+
+            button {
+              gap: rem(10px);
+            }
+          }
+
+          button {
+            justify-content: center;
           }
         }
       }
