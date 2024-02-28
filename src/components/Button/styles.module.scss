@@ -2,21 +2,51 @@
   min-width: rem(120px);
   height: rem(40px);
   position: relative;
+  display: flex;
 
-  img {
-    object-fit: fill;
-  }
+  // img {
+  //   object-fit: fill;
+  // }
 
   &_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 rem(25px);
-    width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    flex: 1;
+  }
+
+  &__black &_content {
+    background: var(--black);
+  }
+
+  &__white &_content {
+    background: var(--white);
+  }
+  &__green &_content {
+    background: var(--green);
+  }
+  &__pink &_content {
+    background: var(--pink);
+  }
+  &__blue &_content {
+    background: var(--blue);
+  }
+  &__yellow &_content {
+    background: var(--yellow);
+  }
+
+  .corner {
+    height: 100%;
+    width: 10%;
+
+    &:last-child {
+      transform: rotate(180deg);
+    }
   }
 }
 
