@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React, { ReactElement } from 'react';
 
-import ImagePreload from '../ImagePreload';
 import s from './styles.module.scss';
 
 const icons = [
@@ -22,7 +21,7 @@ const icons = [
 const Soicals = (): ReactElement => {
   return (
     <div className={s.socials}>
-      <ImagePreload src="/icons/buttons/big.png" priority alt="text-block-wrapper" fill />
+      <Image src="/icons/buttons/big.png" priority alt="text-block-wrapper" fill />
       <button className={s.socials_btn}>
         <div className={s.socials_btn__content}>
           {icons.map((item) => (

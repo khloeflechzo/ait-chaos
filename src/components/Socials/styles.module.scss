@@ -1,6 +1,7 @@
 .socials {
-  width: 100%;
+  width: rem(243px) !important;
   height: 100%;
+  margin: 0 auto;
   position: relative;
 
   &_btn {
