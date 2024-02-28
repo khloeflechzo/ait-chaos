@@ -4,7 +4,8 @@ import React, { ReactElement } from 'react';
 
 import { ButtonProps } from '@/types/common';
 
-import ImagePreload from '../ImagePreload';
+// import ImagePreload from '../ImagePreload';
+import SvgInsert from '../SvgInsert';
 import { TypoLabel } from '../Typo';
 import s from './styles.module.scss';
 
@@ -24,7 +25,9 @@ const Button = ({
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
   return (
     <div onClick={onClick} className={buttonClasses}>
-      <ImagePreload src={`/icons/buttons/${bgColor}.png`} alt="text-block-wrapper" priority fill />
+      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__left)} />
+      <div className={s.button__slice}></div>
+      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__right)} />
       <button className={s.button_content}>
         <TypoLabel color={textColor} className={s.label}>
           {label}

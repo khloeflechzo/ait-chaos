@@ -1,7 +1,7 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import React, { ReactElement } from 'react';
 
-import ImagePreload from '@/components/ImagePreload';
 import { TypoLabel } from '@/components/Typo';
 import { CTADirectionType, ctaValue } from '@/constants/datas/contents';
 
@@ -15,7 +15,7 @@ const BoxContent = ({
   direction: CTADirectionType;
 }): ReactElement => (
   <div className={classNames(s.block, s[`block__${direction}`])}>
-    <ImagePreload src="/images/overlay.png" alt="text-block-wrapper" priority fill />
+    <Image src="/images/overlay.png" alt="text-block-wrapper" priority fill />
     <TypoLabel size={20} color="white" className="!uppercase !leading-normal">
       {text}
     </TypoLabel>

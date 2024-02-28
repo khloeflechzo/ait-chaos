@@ -8,8 +8,9 @@ import Button from '@/components/Button';
 import ImagePreload from '@/components/ImagePreload';
 import { headerButtonsData } from '@/constants/datas/header';
 import useWindowResize from '@/hooks/useWindowResize';
+import { chaosGetBalanceOfUser } from '@/utils/chaos';
 
-// import { getBalanceOfUser } from '@/utils/contract';
+// import { stakeGetBalanceOfUser } from '@/utils/stake';
 import BuyModal from './BuyModal';
 import HeroMobile from './HeroMobile';
 import s from './styles.module.scss';
@@ -24,22 +25,23 @@ export const Header = (): ReactElement => {
       setOpenBuy(true);
       return;
     } else {
-      location.reload();
-      // try {
-      //   if (window.ethereum) {
-      //     const accounts = await window.ethereum.request({
-      //       method: 'eth_requestAccounts',
-      //     });
-      //     const currentAccount = accounts[0];
-      //     console.log(currentAccount);
-      //     // Now you can use `currentAccount` in your contract interactions
-      //     await getBalanceOfUser(currentAccount);
-      //   } else {
-      //     console.error('MetaMask extension not detected');
-      //   }
-      // } catch (error) {
-      //   console.error('Error getting account or balance:', error);
-      // }
+      // location.reload();
+      try {
+        if (window.ethereum) {
+          const accounts = (await window.ethereum.request({
+            method: 'eth_requestAccounts',
+          })) as string[];
+          if (!accounts) return;
+          const currentAccount = accounts[0];
+          console.log(currentAccount);
+          // Now you can use `currentAccount` in your contract interactions
+          await chaosGetBalanceOfUser(currentAccount);
+        } else {
+          console.error('MetaMask extension not detected');
+        }
+      } catch (error) {
+        console.error('Error getting account or balance:', error);
+      }
     }
   };
 

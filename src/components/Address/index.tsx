@@ -6,17 +6,24 @@ import React, { ReactElement } from 'react';
 
 import { truncateEthAddress } from '@/utils/functions';
 
-import ImagePreload from '../ImagePreload';
+import SvgInsert from '../SvgInsert';
 import s from './styles.module.scss';
 
 const Address = ({ className }: { className?: string }): ReactElement => {
   const address = '0x22a3dcb11e75c7ffbed7431c95d29a50f5936667';
 
   return (
-    <div className={cn(s.address, className)}>
-      <ImagePreload src="/icons/buttons/white.png" alt="text-block-wrapper" priority fill />
-      <button className={s.address_btn}>
-        <div className={s.address_btn__content}>
+    <div
+      onClick={() => {
+        navigator.clipboard.writeText(address);
+      }}
+      className={cn(s.button, className)}
+    >
+      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__left)} />
+      <div className={s.button__slice}></div>
+      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__right)} />
+      <button className={s.button_content}>
+        <div className={s.button_content__value}>
           <p>
             CA $CHAOS: <span>{truncateEthAddress(address)}</span>
           </p>

@@ -1,21 +1,22 @@
 import Web3 from 'web3';
 
-import { abi, ankr, contractAddress } from '@/constants/contracts';
+import { abi, ankr, stakeAddress } from '@/constants/contracts';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(ankr));
 
-const contract = new web3.eth.Contract(abi, contractAddress);
+const contract = new web3.eth.Contract(abi, stakeAddress);
 
-export async function getBalanceOfUser(address: string): Promise<void> {
+export async function stakeGetBalanceOfUser(address: string): Promise<void> {
   try {
-    const balance = await contract.methods.balanceOf(address).call();
+    const rawBalance: string = await contract.methods.balanceOf(address).call();
+    const balance: string = web3.utils.fromWei(rawBalance, 'ether');
     console.log('Balance of user ' + address + ' is ' + balance);
   } catch (error) {
     console.error('Error getting balance of user:', error);
   }
 }
 
-export async function getOwnedNFT(address: string, index: number): Promise<void> {
+export async function stakeGetOwnedNFT(address: string, index: number): Promise<void> {
   try {
     const tokenId = await contract.methods.ownedNFT(address, index).call();
     console.log(
@@ -26,7 +27,7 @@ export async function getOwnedNFT(address: string, index: number): Promise<void>
   }
 }
 
-export async function getReward(address: string): Promise<void> {
+export async function stakeGetReward(address: string): Promise<void> {
   try {
     const reward = await contract.methods.getReward(address).call();
     console.log('Reward of address ' + address + ' is ' + reward);
@@ -35,30 +36,30 @@ export async function getReward(address: string): Promise<void> {
   }
 }
 
-export async function stakeNFT(tokenId: string): Promise<void> {
+export async function stakeStakeNFT(tokenId: string): Promise<void> {
   try {
     const tx = contract.methods.stake([tokenId]);
-    const receipt = await tx.send({ from: contractAddress });
+    const receipt = await tx.send({ from: stakeAddress });
     console.log('Staked NFT successfully:', receipt.transactionHash);
   } catch (error) {
     console.error('Error staking NFT:', error);
   }
 }
 
-export async function unstakeNFT(tokenId: string): Promise<void> {
+export async function stakeUnstakeNFT(tokenId: string): Promise<void> {
   try {
     const tx = contract.methods.unstake([tokenId]);
-    const receipt = await tx.send({ from: contractAddress });
+    const receipt = await tx.send({ from: stakeAddress });
     console.log('Unstaked NFT successfully:', receipt.transactionHash);
   } catch (error) {
     console.error('Error unstaking NFT:', error);
   }
 }
 
-export async function claimReward(): Promise<void> {
+export async function stakeSlaimReward(): Promise<void> {
   try {
     const tx = contract.methods.claimReward();
-    const receipt = await tx.send({ from: contractAddress });
+    const receipt = await tx.send({ from: stakeAddress });
     console.log('Reward claimed successfully:', receipt.transactionHash);
   } catch (error) {
     console.error('Error claiming reward:', error);
