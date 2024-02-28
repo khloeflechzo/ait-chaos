@@ -4,49 +4,103 @@
   position: relative;
   display: flex;
 
-  // img {
-  //   object-fit: fill;
-  // }
+  background: var(--black);
+  border: none;
+  outline: none;
+  overflow: hidden;
 
-  &_content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 rem(25px);
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    flex: 1;
-  }
-
-  &__black &_content {
-    background: var(--black);
-  }
-
-  &__white &_content {
-    background: var(--white);
-  }
-  &__green &_content {
+  &__slice {
     background: var(--green);
+    flex: 1;
+    margin: 0 auto;
+    border: rem(2.5px) solid var(--white);
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+
+    border-left: none;
+    border-right: none;
   }
-  &__pink &_content {
-    background: var(--pink);
+
+  &__black {
+    .button__slice {
+      background: var(--black);
+    }
+
+    .corner path:first-child {
+      fill: var(--black);
+    }
   }
-  &__blue &_content {
-    background: var(--blue);
+
+  &__white {
+    .button__slice {
+      background: var(--white);
+    }
+
+    .corner path:first-child {
+      fill: var(--white);
+    }
   }
-  &__yellow &_content {
-    background: var(--yellow);
+  &__green {
+    .button__slice {
+      background: var(--green);
+    }
+
+    .corner path:first-child {
+      fill: var(--green);
+    }
+  }
+  &__pink {
+    .button__slice {
+      background: var(--pink);
+    }
+
+    .corner path:first-child {
+      fill: var(--pink);
+    }
+  }
+  &__blue {
+    .button__slice {
+      background: var(--blue);
+    }
+
+    .corner path:first-child {
+      fill: var(--blue);
+    }
+  }
+  &__yellow {
+    .button__slice {
+      background: var(--yellow);
+    }
+
+    .corner path:first-child {
+      fill: var(--yellow);
+    }
   }
 
   .corner {
+    position: absolute;
     height: 100%;
-    width: 10%;
+    top: 0;
 
-    &:last-child {
-      transform: rotate(180deg);
+    &__left {
+      left: 0;
     }
+
+    &__right {
+      right: 0;
+      transform: scaleX(-1);
+    }
+  }
+
+  &_content {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
   }
 }
 
