@@ -93,6 +93,15 @@
         div {
           &:nth-child(1),
           &:nth-child(2) {
+            svg {
+              position: initial;
+            }
+
+            div:nth-child(2) {
+              border-width: rem(2px);
+              margin: 0 rem(-12px);
+            }
+
             @include onlyMobile {
               display: none;
             }
