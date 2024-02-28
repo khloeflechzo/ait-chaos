@@ -1,12 +1,14 @@
 import LenisScroller from '@Components/Lenis';
 import { NextPage } from 'next';
 
-import LandingPage from '@/modules/Landing';
+// import LandingPage from '@/modules/Landing';
+import Staking from '@/modules/Staking';
 
 const Page: NextPage = () => {
   return (
     <LenisScroller>
-      <LandingPage />
+      {/* <LandingPage /> */}
+      <Staking />
     </LenisScroller>
   );
 };

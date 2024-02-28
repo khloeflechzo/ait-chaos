@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { TypoLabel } from '@/components/Typo';
 import { ButtonProps } from '@/types/common';
 
@@ -110,4 +112,18 @@ export const ctaValue = [
     label: 'Buy NFTs #CHAOSBOX on Opensea or Blur',
     direction: CTADirectionType.UP,
   },
+];
+
+export const StakingBoxNfts = [
+  {
+    type: CubeEnumTypes.Common,
+    box: <Image src="/images/cubes/chaos.png" alt="box-nft" width={200} height={200} />,
+    arrow: <Image src="/icons/buttons/arrow.svg" alt="arrow" width={32} height={32} />,
+    avt: <Image src="/icons/buttons/avt-nft.png" alt="arrow" width={40} height={40} />,
+    title: 'CHAOS NFT',
+    bridge: 'BRIDGE ASSETS TO',
+  },
+  // { type: CubeEnumTypes.Rare },
+  // { type: CubeEnumTypes.Epic },
+  // { type: CubeEnumTypes.Legendary },
 ];
