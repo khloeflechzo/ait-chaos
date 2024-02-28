@@ -13,11 +13,11 @@ const Right = (): ReactElement => {
     <div className={s.wrapper}>
       <BuyAndAddress />
       <CTA />
-      <Soicals />
       <div className={s.wrapper_mteb}>
         <MTE />
         <BuildOn />
       </div>
+      <Soicals />
     </div>
   );
 };

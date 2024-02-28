@@ -215,3 +215,6 @@ export const abi = [
 ];
 
 export const ifura = 'https://goerli.infura.io/v3/d27ebd233370478d838a2fac46089677';
+
+export const ankr =
+  'https://rpc.ankr.com/eth_goerli/36f8de4c4b0fcae12e07bc8f1b1d85a9abef4a02bc59f2d24d5589177bd4e551';

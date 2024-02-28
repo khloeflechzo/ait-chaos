@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { ReactElement, useState } from 'react';
 
 import Button from '@/components/Button';
-// import Carousel from '@/components/Carousel';
 import ImagePreload from '@/components/ImagePreload';
 import { headerButtonsData } from '@/constants/datas/header';
 import useWindowResize from '@/hooks/useWindowResize';
 
+// import { getBalanceOfUser } from '@/utils/contract';
 import BuyModal from './BuyModal';
 import HeroMobile from './HeroMobile';
 import s from './styles.module.scss';
@@ -26,17 +26,19 @@ export const Header = (): ReactElement => {
     } else {
       location.reload();
       // try {
-      //   if ((window as any).ethereum) {
-      //         const accounts = await (window as any).ethereum.request({ method: 'eth_requestAccounts' });
-      //         const currentAccount = accounts[0];
-      //         console.log(currentAccount);
-      //         // Now you can use `currentAccount` in your contract interactions
-      //         await getBalanceOfUser("0x63092eE66F5d8d14754265aDB370D024ebFa2BcF");
-      //     } else {
-      //         console.error('MetaMask extension not detected');
-      //     }
+      //   if (window.ethereum) {
+      //     const accounts = await window.ethereum.request({
+      //       method: 'eth_requestAccounts',
+      //     });
+      //     const currentAccount = accounts[0];
+      //     console.log(currentAccount);
+      //     // Now you can use `currentAccount` in your contract interactions
+      //     await getBalanceOfUser(currentAccount);
+      //   } else {
+      //     console.error('MetaMask extension not detected');
+      //   }
       // } catch (error) {
-      //     console.error('Error getting account or balance:', error);
+      //   console.error('Error getting account or balance:', error);
       // }
     }
   };
@@ -82,7 +84,6 @@ export const Header = (): ReactElement => {
           </button>
         </div>
       </div>
-      {/* <Carousel /> */}
       {open && <HeroMobile />}
       {openBuy && <BuyModal setOpenBuy={setOpenBuy} />}
     </header>

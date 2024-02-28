@@ -10,7 +10,7 @@
     display: flex;
   }
 
-  & > div:nth-child(3) {
+  & > div:last-child {
     height: rem(51px);
     width: 100%;
     display: none;
@@ -23,7 +23,7 @@
   &_mteb {
     display: flex;
     flex-direction: column;
-    gap: rem(12px);
+    gap: rem(24px);
     width: 100%;
   }
 }

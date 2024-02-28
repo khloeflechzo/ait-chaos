@@ -4,15 +4,14 @@
   margin: auto;
   z-index: 5;
 
-  width: rem(178px);
+  width: rem(200px);
   // height: rem(222px);
-  top: rem(-30px);
+  top: rem(-50px);
 
   height: 100%;
 
   @include min-tablet {
-    top: 0;
-    width: rem(230px);
+    top: rem(-50px);
     // height: rem(286px);
   }
 
