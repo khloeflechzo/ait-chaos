@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import BuildOn from '@/components/BuildOn';
-import CTA from '@/components/CTA';
+// import CTA from '@/components/CTA';
 import MTE from '@/components/MTE';
 import Soicals from '@/components/Socials';
 import ThreeButtons from '@/components/ThreeButtons';
@@ -19,7 +19,7 @@ export default function LeftSide(): ReactElement {
         <BuildOn />
       </div>
       <div className={s.wrapper_cta}>
-        <CTA />
+        {/* <CTA /> */}
         <Soicals />
       </div>
     </div>
