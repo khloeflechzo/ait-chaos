@@ -17,9 +17,7 @@
     text-align: center;
     width: fit-content;
     line-height: normal !important;
-    @include min-tablet {
-      padding: 0 rem(20px);
-    }
+    padding: 0 rem(20px);
   }
 
   &__down {
