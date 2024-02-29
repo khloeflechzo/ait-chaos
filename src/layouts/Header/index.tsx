@@ -2,6 +2,7 @@
 
 import classNames from 'classnames';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { ReactElement, useState } from 'react';
 
 import Button from '@/components/Button';
@@ -44,6 +45,8 @@ export const Header = (): ReactElement => {
   //   }
   // };
 
+  const router = useRouter();
+
   return (
     <header className={s.header}>
       <div className={s.header__line}>
@@ -68,6 +71,12 @@ export const Header = (): ReactElement => {
                 child={btn.child}
                 bgColor={btn.bgColor}
                 textColor={btn.textColor}
+                onClick={() => {
+                  if (btn.label === 'Staking') {
+                    router.push('/staking', { scroll: false });
+                  }
+                  return;
+                }}
               />
             ))}
           </div>
