@@ -22,7 +22,7 @@ const Soicals = (): ReactElement => {
   return (
     <div className={s.socials}>
       <Image src="/icons/buttons/big.png" priority alt="text-block-wrapper" fill />
-      <button className={s.socials_btn}>
+      <div className={s.socials_btn}>
         <div className={s.socials_btn__content}>
           {icons.map((item) => (
             <a key={item.icon} href={item.href} target="_blank" rel="noopener">
@@ -30,7 +30,7 @@ const Soicals = (): ReactElement => {
             </a>
           ))}
         </div>
-      </button>
+      </div>
     </div>
   );
 };

@@ -12,17 +12,47 @@
     margin-top: 0;
   }
 
-  &_mteb {
-    display: none;
+  & > div {
+    &:first-child {
+      @include onlyMobile {
+        order: 2;
+      }
+    }
+    &:nth-child(2) {
+      @include onlyMobile {
+        order: 3;
+      }
+    }
+  }
 
-    @include min-tablet {
-      display: flex;
-      flex-direction: column;
-      gap: rem(12px);
-      width: 100%;
+  &_mteb {
+    @include onlyMobile {
+      order: 1;
     }
 
+    display: flex;
+    flex-direction: column;
+    gap: rem(12px);
+    width: 100%;
+
     @include pcSmall {
+      display: none;
+    }
+  }
+
+  &_cta {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+    order: 4;
+
+    & > div {
+      &:last-child {
+        height: rem(51px);
+      }
+    }
+
+    @include min-tablet {
       display: none;
     }
   }

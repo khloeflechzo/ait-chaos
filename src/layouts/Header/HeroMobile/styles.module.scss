@@ -1,11 +1,12 @@
 .header {
   background: var(--black);
   width: 100vw;
-  height: rem(228px);
   position: absolute;
   left: 0;
   right: 0;
   top: 100%;
+  padding: rem(20px) 0;
+
   &_mobile_main {
     display: flex;
     flex-direction: column;
@@ -13,24 +14,17 @@
     text-align: center;
     padding: rem(16px);
     gap: 20px;
+
     & > div {
       height: rem(48px);
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:first-child {
-        border-bottom: 1px solid var(--white);
+
+      & > div:nth-child(2) {
+        margin: 0 rem(-12px);
       }
-      a {
-        font-size: rem(12px);
-        font-style: normal;
-        font-weight: 400;
-      }
-    }
-    & > div:last-child {
-      & > img:first-child {
-        display: none;
+
+      button {
+        justify-content: center;
       }
     }
   }

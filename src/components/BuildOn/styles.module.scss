@@ -4,21 +4,34 @@
   justify-content: center;
   width: 100%;
 
+  --stroke-is: #{rem(3px)};
+  --stroke-ot: #{rem(-3px)};
+
+  @include min-tablet {
+    --stroke-is: #{rem(4px)};
+    --stroke-ot: #{rem(-4px)};
+  }
+
   p {
     font-weight: 400;
     line-height: 100%;
     color: var(--black);
     text-align: center;
-    font-size: rem(54px);
     text-shadow:
-      4px 0 var(--white),
-      -4px 0 var(--white),
-      0 4px var(--white),
-      0 -4px var(--white),
-      4px 4px var(--white),
-      -4px -4px var(--white),
-      4px -4px var(--white),
-      -4px 4px var(--white);
+      var(--stroke-is) 0 var(--white),
+      var(--stroke-ot) 0 var(--white),
+      0 var(--stroke-is) var(--white),
+      0 var(--stroke-ot) var(--white),
+      var(--stroke-is) var(--stroke-is) var(--white),
+      var(--stroke-ot) var(--stroke-ot) var(--white),
+      var(--stroke-is) var(--stroke-ot) var(--white),
+      var(--stroke-ot) var(--stroke-is) var(--white);
+
+    font-size: rem(32px);
+
+    @include min-tablet {
+      font-size: rem(54px);
+    }
 
     @include pcSmall {
       font-size: rem(38px);
