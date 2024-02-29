@@ -1,0 +1,28 @@
+.item {
+  height: rem(417px);
+  width: rem(246px);
+  padding: rem(10px) rem(18px);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+
+  &_bg {
+    object-fit: fill;
+  }
+
+  &_content {
+    &_top {
+      display: flex;
+      height: rem(35px);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &_bottom {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

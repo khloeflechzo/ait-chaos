@@ -1,0 +1,19 @@
+.staking {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  padding-top: rem(130px); /* header height + padding-top */
+  padding-bottom: rem(80px);
+  overflow-x: hidden;
+
+  @include pcSmall {
+    padding-top: rem(113px); /* header height + padding-top */
+  }
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(56px);
+  }
+}

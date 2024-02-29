@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(24px);
+
+  img {
+    &:last-child {
+      transform: scaleX(-1);
+    }
+  }
+}
