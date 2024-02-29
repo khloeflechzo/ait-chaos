@@ -13,30 +13,42 @@
   }
 
   & > div {
-    &:first-child {
-      @include onlyMobile {
-        order: 2;
-      }
-    }
     &:nth-child(2) {
-      @include onlyMobile {
-        order: 3;
+      display: none;
+
+      @include pcSmall {
+        display: flex;
       }
     }
   }
 
+  &_mteatb {
+    display: flex;
+
+    @include min-tablet {
+      display: none;
+    }
+  }
+
   &_mteb {
-    @include onlyMobile {
-      order: 1;
+    display: none;
+
+    @include min-tablet {
+      display: flex;
     }
 
-    display: flex;
     flex-direction: column;
     gap: rem(12px);
     width: 100%;
 
     @include pcSmall {
       display: none;
+    }
+
+    & > div:last-child {
+      @include onlyMobile {
+        display: none;
+      }
     }
   }
 
