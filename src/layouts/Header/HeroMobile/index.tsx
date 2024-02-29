@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import Soicals from '@/components/Socials';
+import Button from '@/components/Button';
 
 import s from './styles.module.scss';
 
@@ -8,13 +8,8 @@ const HeroMobile = (): ReactElement => {
   return (
     <div className={s.header}>
       <div className={s.header_mobile_main}>
-        <div>
-          <a href="">STAKING</a>
-        </div>
-        <div>
-          <a href="">OPEN BOX</a>
-        </div>
-        <Soicals />
+        <Button bgColor="black" label="STAKING" />
+        <Button bgColor="black" label="OPEN BOX" />
       </div>
     </div>
   );

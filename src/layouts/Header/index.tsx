@@ -7,43 +7,42 @@ import { ReactElement, useState } from 'react';
 import Button from '@/components/Button';
 import ImagePreload from '@/components/ImagePreload';
 import { headerButtonsData } from '@/constants/datas/header';
-import useWindowResize from '@/hooks/useWindowResize';
-import { chaosGetBalanceOfUser } from '@/utils/chaos';
 
+// import useWindowResize from '@/hooks/useWindowResize';
+// import { chaosGetBalanceOfUser } from '@/utils/chaos';
 // import { stakeGetBalanceOfUser } from '@/utils/stake';
-import BuyModal from './BuyModal';
 import HeroMobile from './HeroMobile';
 import s from './styles.module.scss';
 
 export const Header = (): ReactElement => {
   const [open, setOpen] = useState(false);
-  const [openBuy, setOpenBuy] = useState(false);
-  const { isDesktop } = useWindowResize();
+  // const [openBuy, setOpenBuy] = useState(false);
+  // const { isDesktop } = useWindowResize();
 
-  const handleButtonChaos = async (): Promise<void> => {
-    if (!isDesktop) {
-      setOpenBuy(true);
-      return;
-    } else {
-      // location.reload();
-      try {
-        if (window.ethereum) {
-          const accounts = (await window.ethereum.request({
-            method: 'eth_requestAccounts',
-          })) as string[];
-          if (!accounts) return;
-          const currentAccount = accounts[0];
-          console.log(currentAccount);
-          // Now you can use `currentAccount` in your contract interactions
-          await chaosGetBalanceOfUser(currentAccount);
-        } else {
-          console.error('MetaMask extension not detected');
-        }
-      } catch (error) {
-        console.error('Error getting account or balance:', error);
-      }
-    }
-  };
+  // const handleButtonChaos = async (): Promise<void> => {
+  //   if (!isDesktop) {
+  //     setOpenBuy(true);
+  //     return;
+  //   } else {
+  //     // location.reload();
+  //     try {
+  //       if (window.ethereum) {
+  //         const accounts = (await window.ethereum.request({
+  //           method: 'eth_requestAccounts',
+  //         })) as string[];
+  //         if (!accounts) return;
+  //         const currentAccount = accounts[0];
+  //         console.log(currentAccount);
+  //         // Now you can use `currentAccount` in your contract interactions
+  //         await chaosGetBalanceOfUser(currentAccount);
+  //       } else {
+  //         console.error('MetaMask extension not detected');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error getting account or balance:', error);
+  //     }
+  //   }
+  // };
 
   return (
     <header className={s.header}>
@@ -62,18 +61,13 @@ export const Header = (): ReactElement => {
         </div>
         <div className={s.buttons}>
           <div className={classNames(s.buttons_link, open ? s.open : '')}>
-            {headerButtonsData.map((btn, idx) => (
+            {headerButtonsData.map((btn) => (
               <Button
                 key={btn.label}
                 label={btn.label}
                 child={btn.child}
                 bgColor={btn.bgColor}
                 textColor={btn.textColor}
-                onClick={() => {
-                  if (idx === headerButtonsData.length - 1) {
-                    handleButtonChaos();
-                  }
-                }}
               />
             ))}
           </div>
@@ -87,7 +81,7 @@ export const Header = (): ReactElement => {
         </div>
       </div>
       {open && <HeroMobile />}
-      {openBuy && <BuyModal setOpenBuy={setOpenBuy} />}
+      {/* {openBuy && <BuyModal setOpenBuy={setOpenBuy} />} */}
     </header>
   );
 };
