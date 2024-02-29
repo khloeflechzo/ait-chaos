@@ -2,6 +2,8 @@
 
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { ReactElement, useState } from 'react';
 
 import Button from '@/components/Button';
@@ -44,6 +46,8 @@ export const Header = (): ReactElement => {
   //   }
   // };
 
+  const router = useRouter();
+
   return (
     <header className={s.header}>
       <div className={s.header__line}>
@@ -56,9 +60,9 @@ export const Header = (): ReactElement => {
         </div>
       </div>
       <div className={classNames('container', s.header__container)}>
-        <div className={s.header_logo}>
+        <Link href="/" className={s.header_logo}>
           <ImagePreload alt="logo" src="/icons/logo.svg" fill />
-        </div>
+        </Link>
         <div className={s.buttons}>
           <div className={classNames(s.buttons_link, open ? s.open : '')}>
             {headerButtonsData.map((btn) => (
@@ -68,6 +72,12 @@ export const Header = (): ReactElement => {
                 child={btn.child}
                 bgColor={btn.bgColor}
                 textColor={btn.textColor}
+                onClick={() => {
+                  if (btn.label === 'Staking') {
+                    router.push('/staking', { scroll: false });
+                  }
+                  return;
+                }}
               />
             ))}
           </div>

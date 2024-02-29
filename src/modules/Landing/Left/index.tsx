@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 
 import BuildOn from '@/components/BuildOn';
-// import CTA from '@/components/CTA';
 import MTE from '@/components/MTE';
+import MTEAndThreeButtons from '@/components/MTEAndThreeButton';
 import Soicals from '@/components/Socials';
 import ThreeButtons from '@/components/ThreeButtons';
 
@@ -12,6 +12,7 @@ import TextBlock from './TextBlock';
 export default function LeftSide(): ReactElement {
   return (
     <div className={s.wrapper}>
+      <MTEAndThreeButtons className={s.wrapper_mteatb} />
       <ThreeButtons />
       <TextBlock />
       <div className={s.wrapper_mteb}>
@@ -19,7 +20,6 @@ export default function LeftSide(): ReactElement {
         <BuildOn />
       </div>
       <div className={s.wrapper_cta}>
-        {/* <CTA /> */}
         <Soicals />
       </div>
     </div>

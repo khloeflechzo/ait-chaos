@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 
+import BuildOn from '@/components/BuildOn';
 import BuyAndAddress from '@/components/BuyAndAddress';
 import RareLabel from '@/components/RareLabel';
 
@@ -11,6 +12,7 @@ const Center = (): ReactElement => {
   return (
     <div className={s.wrapper}>
       <BuyAndAddress />
+      <BuildOn />
       <WrapperBox>
         <Cubes />
         <RareLabel className={s.rarelabel} />

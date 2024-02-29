@@ -12,11 +12,14 @@
     margin: 0;
   }
 
-  & > div:first-child {
-    margin-bottom: rem(24px);
+  & > div {
+    &:first-child,
+    &:nth-child(2) {
+      margin-bottom: rem(24px);
 
-    @include min-tablet {
-      display: none;
+      @include min-tablet {
+        display: none;
+      }
     }
   }
 

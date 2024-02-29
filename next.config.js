@@ -2,6 +2,9 @@
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
+  experimental: {
+    scrollRestoration: 'manual',
+  },
   sassOptions: {
     additionalData: `
           @import "@Styles/_tool.scss";
