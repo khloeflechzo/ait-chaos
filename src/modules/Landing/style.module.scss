@@ -1,7 +1,8 @@
 .main_wrapper {
   width: 100%;
+  height: auto;
   padding-top: rem(130px); /* header height + padding-top */
-  padding-bottom: rem(80px);
+  // padding-bottom: rem(80px);
   overflow-x: hidden;
 
   @include pcSmall {
