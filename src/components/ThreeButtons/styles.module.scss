@@ -44,7 +44,12 @@
       flex-direction: column;
       justify-content: center;
       cursor: default;
-
+      > span {
+        margin-top: rem(2px);
+      }
+      > p {
+        margin-top: rem(-5px);
+      }
       @include min-tablet {
         justify-content: space-between;
         flex-direction: row;

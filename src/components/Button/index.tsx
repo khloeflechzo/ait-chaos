@@ -24,7 +24,9 @@ const Button = ({
   return (
     <div className={s.wrapper}>
       <div onClick={onClick} className={buttonClasses}>
-        <div className={s.button__slice}></div>
+        <div className={s.button__slice}>
+          <div className={s.button__slice_bg}></div>
+        </div>
         <button className={s.button_content}>
           <TypoLabel color={textColor} className={s.label}>
             {label}
