@@ -4,8 +4,6 @@ import React, { ReactElement } from 'react';
 
 import { ButtonProps } from '@/types/common';
 
-// import ImagePreload from '../ImagePreload';
-import SvgInsert from '../SvgInsert';
 import { TypoLabel } from '../Typo';
 import s from './styles.module.scss';
 
@@ -24,16 +22,18 @@ const Button = ({
 }: IButtonProps): ReactElement => {
   const buttonClasses = cn(s.button, s[`button__${bgColor}`], classess);
   return (
-    <div onClick={onClick} className={buttonClasses}>
-      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__left)} />
-      <div className={s.button__slice}></div>
-      <SvgInsert src={`/icons/buttons/corner.svg`} className={cn(s.corner, s.corner__right)} />
-      <button className={s.button_content}>
-        <TypoLabel color={textColor} className={s.label}>
-          {label}
-        </TypoLabel>
-        {!isNil(child) && child}
-      </button>
+    <div className={s.wrapper}>
+      <div onClick={onClick} className={buttonClasses}>
+        <div className={s.button__slice}>
+          <div className={s.button__slice_bg}></div>
+        </div>
+        <button className={s.button_content}>
+          <TypoLabel color={textColor} className={s.label}>
+            {label}
+          </TypoLabel>
+          {!isNil(child) && child}
+        </button>
+      </div>
     </div>
   );
 };
