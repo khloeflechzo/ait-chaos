@@ -1,4 +1,6 @@
-export async function fetchCollectionByAddress(address: string): Promise<string | null> {
+import { ChaosToken } from '@/types/common';
+
+export async function fetchCollectionByAddress(address: string): Promise<ChaosToken[] | null> {
   const url = `https://testnets-api.opensea.io/api/v2/chain/sepolia/account/${address}/nfts?collection=chaos-23`;
   try {
     const response = await fetch(url);
