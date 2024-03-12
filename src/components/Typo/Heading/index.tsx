@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 interface TypographyProps extends PropsWithChildren {
   color?: 'white' | 'black';
-  size?: 112 | 100 | 88;
+  size?: 112 | 100 | 88 | 24;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
   className?: string;
 }

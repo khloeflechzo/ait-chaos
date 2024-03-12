@@ -1,0 +1,80 @@
+.popupwallet {
+  position: fixed;
+  inset: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dddddd22;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  will-change: opacity;
+  transition: opacity 0.4s var(--easeInOutQuart);
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+
+    .popupwallet_content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &_content {
+    position: absolute;
+
+    width: calc(100% - 16px);
+
+    @include min-tablet {
+      width: 470px;
+    }
+
+    height: auto;
+    min-height: 355px;
+    padding: 24px 16px 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #0a0a0a;
+    gap: 24px;
+
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: opacity, transform;
+    transition:
+      opacity 0.4s var(--easeInOutQuart),
+      transform 0.4s var(--easeInOutQuart);
+
+    &__bottom,
+    &__top {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__bottom {
+      button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+
+        border-radius: 8px;
+        border: 1px solid rgba(254, 252, 232, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}

@@ -7,7 +7,6 @@ import React, { PropsWithChildren } from 'react';
 import { DebugGrid } from '@/components/DebugGrid';
 import { eightbits, goldman, upHeavel } from '@/constants/fonts';
 import Animate from '@/layouts/Animation';
-import { Header } from '@/layouts/Header';
 
 export const metadata: Metadata = {
   title: 'Chaos',
@@ -19,10 +18,7 @@ export default function RootLayout({ children }: PropsWithChildren): React.React
   return (
     <html lang="en" className={classNames(goldman.variable, eightbits.variable, upHeavel.variable)}>
       <body>
-        <Animate>
-          <Header />
-          {children}
-        </Animate>
+        <Animate>{children}</Animate>
         <DebugGrid />
       </body>
     </html>
