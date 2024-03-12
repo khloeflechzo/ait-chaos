@@ -1,7 +1,6 @@
 .item {
   height: rem(417px);
   width: rem(246px);
-  padding: rem(10px) rem(18px);
   position: relative;
 
   display: flex;
@@ -10,9 +9,13 @@
 
   &_bg {
     object-fit: fill;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 
   &_content {
+    padding: rem(10px) rem(18px);
     &_top {
       display: flex;
       height: rem(35px);
